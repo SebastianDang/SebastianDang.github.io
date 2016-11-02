@@ -159,9 +159,9 @@ hr.small {
     -o-background-size: cover;
 }
 
-/* Blinking Text */
+/* Blinking Cursor */
 
-.blinking-text {
+.blinking-cursor {
   font-weight: 100;
   font-size: 30px;
   color: #2E3D48;
