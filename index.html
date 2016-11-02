@@ -60,7 +60,7 @@
         <div class="text-vertical-center">
             <h1>Sebastian Dang</h1>
             <!--Typewriter-->
-            <div id="typewriter"></div>
+            <span id="typewriter"></span><span class="blinking-text">|</span>
             <br>
             <!--Button-->
             <a href="#about" class="btn btn-dark btn-lg">Continue</a>
@@ -311,24 +311,26 @@
         }
     });
     //#typewriter
-    var headline = "<h3>Software Developer</h3>";
-    var i = 0, isTag, headline_text;
-
+    var headline = "Software Developer";
+    var i = 0, isTag, isEnd, headline_text;
     (function type() {
         headline_text = headline.slice(0, ++i);
-        if (headline_text === headline) return;//Return when done.
-
+        //Replace.
         document.getElementById('typewriter').innerHTML = headline_text;
-
+		//Read the last char.
         var char = headline_text.slice(-1);
+        //Check for tags. Skip them if found.
         if( char === '<' ) isTag = true;
         if( char === '>' ) isTag = false;
-
-        if (isTag) return type();//Skip tags.
-
+        if (isTag) return type();
+        //Check for ';' character. If so, end.
+        if( char === ';' ) isEnd = true;
+        if (isEnd) return
+        //Return when done.
+        if (headline_text === headline) return;
+        //Delay.
         setTimeout(type, 100);
     }());
-
     //#Else
 
     //End Script
