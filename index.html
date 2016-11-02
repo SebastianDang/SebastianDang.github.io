@@ -59,11 +59,11 @@
     <header id="top" class="header">
         <div class="text-vertical-center">
             <h1>Sebastian Dang</h1>
-            <h3>Software Developer</h3>
-
+            <!--Typewriter-->
+            <div id="typewriter"></div>
             <br>
-
-            <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
+            <!--Button-->
+            <a href="#about" class="btn btn-dark btn-lg">Continue</a>
 
         </div>
     </header>
@@ -74,7 +74,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>About Me</h2>
-                    <p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>
+                    <p class="lead"></p>
                 </div>
             </div>
             <!-- /.row -->
@@ -310,6 +310,27 @@
             }
         }
     });
+    //#typewriter
+    var headline = "<p>Software Developer</p>";
+    var i = 0, isTag, headline_text;
+
+    (function type() {
+        headline_text = headline.slice(0, ++i);
+        if (headline_text === headline) return;//Return when done.
+
+        document.getElementById('typewriter').innerHTML = headline_text;
+
+        var char = headline_text.slice(-1);
+        if( char === '<' ) isTag = true;
+        if( char === '>' ) isTag = false;
+
+        if (isTag) return type();//Skip tags.
+
+        setTimeout(type, 100);
+    }());
+
+    //#Else
+
     //End Script
     </script>
 
