@@ -61,9 +61,9 @@
             <h1>Sebastian Dang</h1>
             <!--Typewriter-->
             <div id="typed-strings">
-                <p>Soft^100ware ^300 Developer</p>
-                <p>Web ^100 Developer</p>
-                <p>TEST TEST TEST TEST TEST</p>
+                <h3>Soft ^100 ware ^300 Developer</h3>
+                <h3>Web ^100 Developer</h3>
+                <h3>TEST TEST TEST TEST TEST</h3>
             </div>
             <span id="typed"></span>
             <br>
@@ -343,21 +343,7 @@
 			// attribute to type (null == text)
 			attr: null,
 			// either html or text
-			contentType: 'html',
-            // Custom Edit
-            backspace: function(curString, curStrPos){
-            	setTimeout(function() {
-
-            			if (self.arrayPos == 2){
-            				self.stopNum = 3;
-            			}
-            			else{
-            				self.stopNum = 0;
-            			}
-                    }
-                )
-            }
-
+			contentType: 'html'
 		});
 	});
 
