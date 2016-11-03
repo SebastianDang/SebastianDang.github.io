@@ -60,7 +60,11 @@
         <div class="text-vertical-center">
             <h1>Sebastian Dang</h1>
             <!--Typewriter-->
-            <h3><span id="typewriter"></span><span class="blinking-text">_</span></h3>
+            <div id="typed-strings">
+                <p>Software Developer</p>
+                <p>Web Developer</p>
+            </div>
+            <span id="typed"></span>
             <br>
             <!--Button-->
             <a href="#about" class="btn btn-dark btn-lg">Continue</a>
@@ -255,6 +259,9 @@
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
+    <!-- Typed -->
+    <script src="js/typed.js"></script>
+
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
@@ -311,35 +318,35 @@
         }
     });
     //#typewriter
-    var headline = "Software Developer";
-    var headline1 = "Software Developer";
-    var headline2 = "Web Developer";
-    var i = 0, isTag, isEnd, headline_text;
+    $(function(){
+		$("#typed").typed({
+			stringsElement: $('#typed-strings'),
+			// typing speed
+			typeSpeed: 100,
+			// time before typing starts
+			startDelay: 500,
+			// backspacing speed
+			backSpeed: 100,
+			// shuffle the strings
+ +        	shuffle: false,
+			// time before backspacing
+			backDelay: 500,
+			// loop
+			loop: false,
+			// false = infinite
+			loopCount: false,
+			// show cursor
+			showCursor: true,
+			// character for cursor
+			cursorChar: "_",
+			// attribute to type (null == text)
+			attr: null,
+			// either html or text
+			contentType: 'html',
+			
+		});
+	});
 
-    (function type() {
-      headline_text = headline.slice(0, ++i);
-      //Replace.
-      document.getElementById('typewriter').innerHTML = headline_text;
-      //Read the last char.
-      var char = headline_text.slice(-1);
-      //Check for tags. Skip them if found.
-      if(char === '<') isTag = true;
-      if(char === '>') isTag = false;
-      if (isTag) return type();
-      //Check for ';' character. If so, end.
-      if(char === ';') isEnd = true;
-      if (isEnd) return;
-      //Delay.
-      setTimeout(type, 100);
-    })();
-
-    (function repeatType(){
-      if (headline_text == headline1) headline = headline2;
-      else if (headline_text == headline2) headline = headline1;
-      //Set back to 0 for type to repeat.
-      i = 0;
-      setTimeout(repeatType, 10000);
-    })();
     //#Else
 
     //End Script
