@@ -46,12 +46,14 @@
             <li>
                 <a href="#skills" onclick=$("#menu-close").click();>Skills</a>
             </li>
+            <!--
             <li>
                 <a href="#portfolio" onclick=$("#menu-close").click();>Projects</a>
             </li>
             <li>
                 <a href="#contact" onclick=$("#menu-close").click();>Contact</a>
             </li>
+            -->
         </ul>
     </nav>
 
@@ -82,7 +84,7 @@
         <!-- /.container -->
     </section>
 
-    <!-- Services -->
+    <!-- Skills -->
     <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
     <section id="skills" class="skills bg-primary">
         <div class="container">
@@ -100,7 +102,8 @@
                                 <h4>
                                     <strong>Programming Tools</strong>
                                 </h4>
-                                <p>Visual Studio, Git, Vim, AndroidStudio</p>
+                                <p>Visual Studio, Git<br>
+                                   Vim, AndroidStudio</p>
                                 <a href="#" class="btn btn-light">Learn More</a>
                             </div>
                         </div>
@@ -113,7 +116,8 @@
                                 <h4>
                                     <strong>Languages</strong>
                                 </h4>
-                                <p>C++, Java, OCaml</p>
+                                <p>C, C++, Java<br>
+                                   OCaml, JavaScript</p>
                                 <a href="#" class="btn btn-light">Learn More</a>
                             </div>
                         </div>
@@ -154,60 +158,19 @@
     </section>
 
     <!-- Callout -->
+<!--
     <aside class="callout">
         <div class="text-vertical-center">
             <h1>Vertically Centered Text</h1>
         </div>
     </aside>
+-->
 
     <!-- Portfolio -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>Our Work</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.row (nested) -->
-                    <a href="#" class="btn btn-dark">View More Items</a>
-                </div>
-                <!-- /.col-lg-10 -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
+
 
     <!-- Call to Action -->
+<!--
     <aside class="call-to-action bg-primary">
         <div class="container">
             <div class="row">
@@ -219,6 +182,7 @@
             </div>
         </div>
     </aside>
+-->
 
     <!-- Footer -->
     <footer>
@@ -228,20 +192,17 @@
                     <h4><strong>Sebastian Dang</strong>
                     </h4>
                     <ul class="list-unstyled">
-                            <li><i class="fa fa-envelope-o fa-fw"></i><a href="mailto:sebastiandang95@gmail.com">sebastiandang95@gmail.com</a></li>
-                            <li><i class="fa fa-linkedin-square fa-fw"></i><a href="https://www.linkedin.com/in/sebastiandang">LinkedIn</li>
-                            <li><i class="fa fa-github-square fa-fw"></i><a href="https://github.com/sebastiandang">GitHub</li>
+                        <li>
+                            <i class="fa fa-envelope-o fa-fw"></i><a href="mailto:sebastiandang95@gmail.com">sebastiandang95@gmail.com</a>
+                        </li>
                     </ul>
                     <br>
                     <ul class="list-inline">
                         <li>
-                            <a href="#"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                            <i class="fa fa-linkedin-square fa-fw"></i><a href="https://www.linkedin.com/in/sebastiandang">LinkedIn</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-dribbble fa-fw fa-3x"></i></a>
+                            <i class="fa fa-github-square fa-fw"></i><a href="https://github.com/sebastiandang">GitHub</a>
                         </li>
                     </ul>
                     <hr class="small">
@@ -256,7 +217,7 @@
     <script src="js/jquery.js"></script>
 
     <!-- Typed -->
-    <script src="js/typed.js"></script>
+    <script src="js/typed.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -318,7 +279,7 @@
 		$("#typed").typed({
 			strings: ["Soft^100ware ^300 Developer", "Web ^100 Developer"],
 			// typing speed
-			typeSpeed: 200,
+			typeSpeed: 150,
 			// time before typing starts
 			startDelay: 500,
 			// backspacing speed
