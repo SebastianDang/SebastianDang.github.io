@@ -70,13 +70,14 @@
         </div>
     </header>
 
-    <!-- About -->
+    <!-- Calendar -->
     <section id="about" class="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>About Me</h2>
+                    <h2>Sebastian's Calendar</h2>
                     <p class="lead"></p>
+                    <iframe src="https://calendar.google.com/calendar/embed?src=sebastiandang95%40gmail.com&ctz=America/Los_Angeles" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
                 </div>
             </div>
             <!-- /.row -->
@@ -84,113 +85,6 @@
         <!-- /.container -->
     </section>
 
-    <!-- Skills -->
-    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-    <section id="skills" class="skills bg-primary">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <h2>Skills</h2>
-                    <hr class="small">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-keyboard-o fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Programming Tools</strong>
-                                </h4>
-                                <p>Visual Studio<br>
-                                   Git Vim<br>
-                                   Unity<br>
-                                   AndroidStudio</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-language fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Languages</strong>
-                                </h4>
-                                <p>C++ Java C<br>
-                                   OCaml Python<br>
-                                   Prolog<br>
-                                   JavaScript</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-clipboard fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Experience</strong>
-                                </h4>
-                                <p>OpenGL<br>
-                                   GLSL Shaders<br>
-                                   Web Development</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-hdd-o fa-stack-1x text-primary"></i>
-                            </span>
-                                <h4>
-                                    <strong>Operating Systems</strong>
-                                </h4>
-                                <p>Windows<br>
-                                   MacOS<br>
-                                   Linux</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.row (nested) -->
-                </div>
-                <!-- /.col-lg-10 -->
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    </section>
-
-    <!-- Callout -->
-<!--
-    <aside class="callout">
-        <div class="text-vertical-center">
-            <h1>Vertically Centered Text</h1>
-        </div>
-    </aside>
--->
-
-    <!-- Portfolio -->
-
-
-    <!-- Call to Action -->
-<!--
-    <aside class="call-to-action bg-primary">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h3>The buttons below are impossible to resist.</h3>
-                    <a href="#" class="btn btn-lg btn-light">Click Me!</a>
-                    <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
-                </div>
-            </div>
-        </div>
-    </aside>
--->
 
     <!-- Footer -->
     <footer>
@@ -283,37 +177,13 @@
             }
         }
     });
-
-    //#Else
-
-    //End Script
     </script>
+
     <script>
-    function passWord() {
-    var testV = 1;
-    var pass1 = prompt('Please Enter Your Password',' ');
-    while (testV < 3) {
-    if (!pass1)
-    history.go(-1);
-    if (pass1.toLowerCase() == "letmein") {
-    alert('You Got it Right!');
-    window.open('/tami.html');
-    break;
-    }
-    testV+=1;
-    var pass1 =
-    prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
-    }
-    if (pass1.toLowerCase()!="password" & testV ==3)
-    history.go(-1);
-    return " ";
-    }
+    $("iframe").wrap('<div class="embed-responsive embed-responsive-16by9" />');
+    $("iframe").addClass('embed-responsive-item');
     </script>
-    <center>
-    <form>
-    <input type="button" value="Enter Protected Area" onClick="passWord()">
-    </form>
-    </center>
+
 
 </body>
 
