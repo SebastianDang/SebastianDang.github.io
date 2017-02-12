@@ -46,14 +46,6 @@
             <li>
                 <a href="#bucketlist" onclick=$("#menu-close").click();>Bucket List</a>
             </li>
-            <!--
-            <li>
-                <a href="#portfolio" onclick=$("#menu-close").click();>Projects</a>
-            </li>
-            <li>
-                <a href="#contact" onclick=$("#menu-close").click();>Contact</a>
-            </li>
-            -->
         </ul>
     </nav>
 
@@ -65,13 +57,13 @@
             <h3><span id="typed"></span></h3>
             <br>
             <!--Button-->
-            <a href="#about" class="btn btn-dark btn-lg">Hi Boo</a>
+            <a href="#calendar" class="btn btn-dark btn-lg">Hi Boo</a>
 
         </div>
     </header>
 
     <!-- Calendar -->
-    <section id="about" class="about">
+    <section id="calendar" class="calendar">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -84,6 +76,95 @@
         </div>
         <!-- /.container -->
     </section>
+
+    <!-- Bucket List -->
+    <section id="skills" class="skills bg-primary">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>Skills</h2>
+                <hr class="small">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item">
+                            <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-keyboard-o fa-stack-1x text-primary"></i>
+                        </span>
+                            <h4>
+                                <strong>Programming Tools</strong>
+                            </h4>
+                            <p>Visual Studio<br>
+                               Git Vim<br>
+                               Unity<br>
+                               AndroidStudio</p>
+                            <a href="#" class="btn btn-light">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item">
+                            <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-language fa-stack-1x text-primary"></i>
+                        </span>
+                            <h4>
+                                <strong>Languages</strong>
+                            </h4>
+                            <p>C++ Java C<br>
+                               OCaml Python<br>
+                               Prolog<br>
+                               JavaScript</p>
+                            <a href="#" class="btn btn-light">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item">
+                            <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-clipboard fa-stack-1x text-primary"></i>
+                        </span>
+                            <h4>
+                                <strong>Experience</strong>
+                            </h4>
+                            <p>OpenGL<br>
+                               GLSL Shaders<br>
+                               Web Development</p>
+                            <a href="#" class="btn btn-light">Learn More</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item">
+                            <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-hdd-o fa-stack-1x text-primary"></i>
+                        </span>
+                            <h4>
+                                <strong>Operating Systems</strong>
+                            </h4>
+                            <p>Windows<br>
+                               MacOS<br>
+                               Linux</p>
+                            <a href="#" class="btn btn-light">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.col-lg-10 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>
+
+
+
+
+
+
+
+
+
 
 
     <!-- Footer -->
@@ -121,6 +202,9 @@
 
     <!-- Typed -->
     <script src="js/typed.min.js"></script>
+
+    <!-- Flipped -->
+    <script src="js/jquery.flip.min.js">
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -182,6 +266,10 @@
     <script>
     $("iframe").wrap('<div class="embed-responsive embed-responsive-16by9" />');
     $("iframe").addClass('embed-responsive-item');
+    </script>
+
+    <script>
+    $(".flipper").flip();
     </script>
 
 
