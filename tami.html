@@ -38,13 +38,13 @@
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
-                <a href="#top" onclick=$("#menu-close").click();>Sebastian Dang</a>
+                <a href="#top" onclick=$( "#menu-close").click();>Sebastian Dang</a>
             </li>
             <li>
-                <a href="#calendar" onclick=$("#menu-close").click();>Calendar</a>
+                <a href="#calendar" onclick=$( "#menu-close").click();>Calendar</a>
             </li>
             <li>
-                <a href="#bucketlist" onclick=$("#menu-close").click();>Bucket List</a>
+                <a href="#bucketlist" onclick=$( "#menu-close").click();>Bucket List</a>
             </li>
         </ul>
     </nav>
@@ -80,79 +80,93 @@
 
     <!-- Bucket List -->
     <section id="bucketlist" class="bucketlist bg-primary">
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-lg-10 col-lg-offset-1">
-                <h2>Bucket List</h2>
-                <hr class="small">
-                <div class="row">
-                    <div class="col-md-3 col-md-6">
-                        <div class="panel panel-default">
-                            <div class="panel-image hide-panel-body">
-                                <a data-toggle="collapse" data-target="#collapse1"><img src="./img/bucketlist/1.jpg" class="panel-image-preview"></a>
-                            </div>
-                            <div id="collapse1" class="panel-collapse collapse panel-custom">
-                                <div class="panel-body">
-                                    <h4>The Broad Museum</h4>
-                                    <hr class="small">
-                                    <p>The Broad is a new contemporary art museum on Grand Avenue in downtown Los Angeles. </p>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2>Bucket List</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-3 col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-image hide-panel-body">
+                                    <a data-toggle="collapse" data-target="#collapse1"><img src="./img/bucketlist/1.jpg" class="panel-image-preview"></a>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse panel-custom">
+                                    <div class="panel-body">
+                                        <h4>The Broad Museum</h4>
+                                        <hr class="small">
+                                        <p>The Broad is a new contemporary art museum on Grand Avenue in downtown Los Angeles. </p>
+                                    </div>
+                                </div>
+                                <div class="panel-footer text-center panel-custom">
+                                    <a href="https://goo.gl/maps/ryHac43L1b32" target="_blank"><span class="fa fa-map-marker"></span></a>
+                                    <a href="http://www.thebroad.org/" target="_blank"><span class="fa fa-external-link"></span></a>
                                 </div>
                             </div>
-                            <div class="panel-footer text-center panel-custom">
-                                <a href="https://goo.gl/maps/ryHac43L1b32" target="_blank"><span class="fa fa-map-marker"></span></a>
-                                <a href="http://www.thebroad.org/" target="_blank"><span class="fa fa-external-link"></span></a>
+                        </div>
+                        <div class="col-md-3 col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-image hide-panel-body">
+                                    <a data-toggle="collapse" data-target="#collapse2"><img src="./img/bucketlist/2.jpg" class="panel-image-preview"></a>
+                                </div>
+                                <div id="collapse2" class="panel-collapse collapse panel-custom">
+                                    <div class="panel-body">
+                                        <h4>Griffith Observatory</h4>
+                                        <hr class="small">
+                                        <p>A public observatory, planetarium, and exhibition space. The best vantage point for the Hollywood Sign. </p>
+                                    </div>
+                                </div>
+                                <div class="panel-footer text-center panel-custom">
+                                    <a href="https://goo.gl/maps/ZL6MRFws68T2" target="_blank"><span class="fa fa-map-marker"></span></a>
+                                    <a href="http://www.griffithobservatory.org/" target="_blank"><span class="fa fa-external-link"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-image hide-panel-body">
+                                    <a data-toggle="collapse" data-target="#collapse3"><img src="./img/bucketlist/3.jpg" class="panel-image-preview"></a>
+                                </div>
+                                <div id="collapse3" class="panel-collapse collapse panel-custom">
+                                    <div class="panel-body">
+                                        <h4>Los Angeles Art District</h4>
+                                        <hr class="small">
+                                        <p>Includes many stylish galleries, coffee shops, restaurants, and places to view modern and contemporary art.</p>
+                                    </div>
+                                </div>
+                                <div class="panel-footer text-center panel-custom">
+                                    <a href="https://goo.gl/maps/Tb4qtiNhnVH2" target="_blank"><span class="fa fa-map-marker"></span></a>
+                                    <a href="https://www.timeout.com/los-angeles/downtown-arts-district-los-angeles" target="_blank"><span class="fa fa-external-link"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-image hide-panel-body">
+                                    <a data-toggle="collapse" data-target="#collapse4"><img src="./img/bucketlist/4.jpg" class="panel-image-preview"></a>
+                                </div>
+                                <div id="collapse4" class="panel-collapse collapse panel-custom">
+                                    <div class="panel-body">
+                                        <h4>Sample 4</h4>
+                                        <hr class="small">
+                                        <p>text text text text text text text text text text text text text text text text text text text </p>
+                                    </div>
+                                </div>
+                                <div class="panel-footer text-center panel-custom">
+                                    <a href="#" target="_blank"><span class="fa fa-map-marker"></span></a>
+                                    <a href="#" target="_blank"><span class="fa fa-external-link"></span></a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 col-md-6">
-                        <div class="panel panel-default">
-                            <div class="panel-image hide-panel-body">
-                                <a data-toggle="collapse" data-target="#collapse2"><img src="./img/bucketlist/2.jpg" class="panel-image-preview"></a>
-                            </div>
-                            <div id="collapse2" class="panel-collapse collapse panel-custom">
-                                <div class="panel-body">
-                                    <h4>Griffith Observatory</h4>
-                                    <hr class="small">
-                                    <p>A public observatory, planetarium, and exhibition space. The best vantage point for the Hollywood Sign. </p>
-                                </div>
-                            </div>
-                            <div class="panel-footer text-center panel-custom">
-                                <a href="https://goo.gl/maps/ZL6MRFws68T2" target="_blank"><span class="fa fa-map-marker"></span></a>
-                                <a href="http://www.griffithobservatory.org/" target="_blank"><span class="fa fa-external-link"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-md-6">
-                        <div class="panel panel-default">
-                            <div class="panel-image hide-panel-body">
-                                <a data-toggle="collapse" data-target="#collapse3"><img src="./img/bucketlist/3.jpg" class="panel-image-preview"></a>
-                            </div>
-                            <div id="collapse3" class="panel-collapse collapse panel-custom">
-                                <div class="panel-body">
-                                    <h4>Los Angeles Art District</h4>
-                                    <hr class="small">
-                                    <p>Includes many stylish galleries, coffee shops, restaurants, and places to view modern and contemporary art.</p>
-                                </div>
-                            </div>
-                            <div class="panel-footer text-center panel-custom">
-                                <a href="https://goo.gl/maps/Tb4qtiNhnVH2" target="_blank"><span class="fa fa-map-marker"></span></a>
-                                <a href="https://www.timeout.com/los-angeles/downtown-arts-district-los-angeles" target="_blank"><span class="fa fa-external-link"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-md-6">
-
-                    </div>
+                    <!-- /.row (nested) -->
                 </div>
-                <!-- /.row (nested) -->
+                <!-- /.col-lg-10 -->
             </div>
-            <!-- /.col-lg-10 -->
+            <!-- /.row -->
         </div>
-        <!-- /.row -->
-    </div>
-    <!-- /.container -->
-</section>
-
+        <!-- /.container -->
+    </section>
 
 
 
@@ -209,65 +223,64 @@
 
     <!-- Custom Theme JavaScript -->
     <script>
-    // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-    // Scrolls to the selected menu item on the page
-    $(function() {
-        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
+        // Closes the sidebar menu
+        $("#menu-close").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Opens the sidebar menu
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Scrolls to the selected menu item on the page
+        $(function() {
+            $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+        //#to-top button appears after scrolling
+        var fixed = false;
+        $(document).scroll(function() {
+            if ($(this).scrollTop() > 250) {
+                if (!fixed) {
+                    fixed = true;
+                    // $('#to-top').css({position:'fixed', display:'block'});
+                    $('#to-top').show("slow", function() {
+                        $('#to-top').css({
+                            position: 'fixed',
+                            display: 'block'
+                        });
+                    });
+                }
+            } else {
+                if (fixed) {
+                    fixed = false;
+                    $('#to-top').hide("slow", function() {
+                        $('#to-top').css({
+                            display: 'none'
+                        });
+                    });
                 }
             }
         });
-    });
-    //#to-top button appears after scrolling
-    var fixed = false;
-    $(document).scroll(function() {
-        if ($(this).scrollTop() > 250) {
-            if (!fixed) {
-                fixed = true;
-                // $('#to-top').css({position:'fixed', display:'block'});
-                $('#to-top').show("slow", function() {
-                    $('#to-top').css({
-                        position: 'fixed',
-                        display: 'block'
-                    });
-                });
-            }
-        } else {
-            if (fixed) {
-                fixed = false;
-                $('#to-top').hide("slow", function() {
-                    $('#to-top').css({
-                        display: 'none'
-                    });
-                });
-            }
-        }
-    });
     </script>
     <!-- Responsive iFrame for Calendar -->
     <script>
-    $("iframe").wrap('<div class="embed-responsive embed-responsive-16by9" />');
-    $("iframe").addClass('embed-responsive-item');
+        $("iframe").wrap('<div class="embed-responsive embed-responsive-16by9" />');
+        $("iframe").addClass('embed-responsive-item');
     </script>
     <!-- Custom Panels for Bucket List -->
     <script>
-
     </script>
 
 
