@@ -1,0 +1,236 @@
+// Copyright 2013 Clark DuVall
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+
+/* jsterm */
+
+#jsterm_container {
+   width: 95%;
+   border: 1px;
+}
+
+.jsterm a {
+   color: #E0E0E0;
+   text-decoration: none;
+}
+
+.jsterm a:hover {
+   text-decoration: underline;
+}
+
+div.jsterm {
+   background: black;
+   font-family: monospace;
+   font-size: 16px;
+   color: #E0E0E0;
+   margin-bottom: 20px;
+   white-space: pre-wrap;
+}
+
+div.jsterm .host, div.jsterm .host a {
+   color: #5555ff;
+   font-weight: bold;
+}
+
+div.jsterm .user, div.jsterm .user a {
+   color: #ff5555;
+   font-weight: bold;
+}
+
+div.jsterm .cwd, div.jsterm .cwd a {
+   color: #ffff55;
+   font-weight: bold;
+}
+
+div.jsterm .dir, div.jsterm .dir a {
+   color: #5555ff;
+   font-weight: bold;
+}
+
+div.jsterm .link, div.jsterm .link a {
+   color: #5555ff;
+   font-weight: bold;
+}
+
+div.jsterm .exec, div.jsterm .exec a {
+   color: #55ff55;
+   font-weight: bold;
+}
+
+div.jsterm .img, div.jsterm .img a {
+   color: #ff55ff;
+   font-weight: bold;
+}
+
+div.jsterm .help, div.jsterm .help a {
+   color: #ff5500;
+   font-weight: bold;
+}
+
+#blinker {
+    line-height: .9em;
+}
+
+
+// Terminal
+
+.root {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.computerContainer {
+  width: 800px;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  background-color: #b9ab84;
+  border-radius: 24px 24px 0 0;
+}
+
+.screenContainer {
+  flex: 0 0 63%;
+  border-radius: 20px 20px 0 0;
+  background: #cfc19a;
+  padding: 25px;
+}
+
+.screenFrame {
+  height: 100%;
+  background-color: #b9ab84;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px 20px;
+}
+
+.screen {
+  background-color: black;
+  height: 90%;
+  width: 90%;
+  margin: 18px 0;
+  border-radius: 235px / 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.terminal {
+  height: 500px;
+  flex: 0 0 95%;
+  overflow-y: auto;
+  font-size: 12px;
+}
+
+.terminal::-webkit-scrollbar {
+    width: 8px;
+}
+.terminal::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+.terminal::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #00fe00;
+}
+
+.bodyDecor {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #cfc19a;
+  border-radius: 0 0 24px 24px;
+  padding: 10px 30px;
+}
+
+.floppyDriveContainer {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.logoContainer {
+  flex: 1;
+}
+
+.floppyDrive {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.floppySlot {
+  height: 8px;
+  width: 208px;
+  background-color: #222;
+  position: absolute;
+  right: 29px;
+}
+.floppyShade {
+  height: 45px;
+  width: 119px;
+  background-color: #b9ab84;
+  position: absolute;
+  top: -20px;
+  right: 0;
+  border-radius: 3px;
+}
+.floppyShadeDarker {
+  height: 37px;
+  width: 101px;
+  background-color: #988b73;
+  position: absolute;
+  top: -16px;
+  right: 11px;
+  border-radius: 4px;
+}
+
+.logo {
+  border: 1px solid #222;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  background-size: 159%;
+  background-position: 46% 41%;
+  background-image: url(https://www.2ndvote.com/wp-content/uploads/2016/06/Apple-Logo-rainbow.png)
+}
+
+.bottomDecor {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.bottomButton {
+  height: 40px;
+  width: 10px;
+  flex: 0 0 100px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 2px solid #222;
+  position: relative;
+}
+.bottomButton::after {
+  content: '';
+  height: 75%;
+  right: 3px;
+  background-color: #222;
+  width: 25px;
+  position: absolute;
+  margin: 4px 4px;
+  border-radius: 4px;
+}

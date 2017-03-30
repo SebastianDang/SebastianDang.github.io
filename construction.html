@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Sebastian Dang">
+
+    <title>Sebastian Dang</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/jsterm.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500|Slabo+27px" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a href="#top" onclick=$( "#menu-close").click();>Sebastian Dang</a>
+            </li>
+            <li>
+                <a href="#about" onclick=$( "#menu-close").click();>About</a>
+            </li>
+            <li>
+                <a href="#skills" onclick=$( "#menu-close").click();>Skills</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <!--Title-->
+            <h1>Sebastian Dang</h1>
+            <!--Typewriter-->
+            <h3><span id="typed"></span></h3><br>
+            <!--Button-->
+            <a href="#about" class="btn btn-dark btn-lg">Continue</a>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1>About Me</h1>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-md-2">
+                </div>
+
+                <div class="col-lg-8">
+
+                    <div class="root">
+                        <main class="computerContainer">
+                            <section class="screenContainer">
+                                <div class="screenFrame">
+                                    <div class="screen">
+                                        <div class="terminal">
+
+
+                                            <div id="jsterm_container">
+                                                <script type="text/javascript" src="./commands/com1.js"></script>
+                                                <script type="text/javascript" src="./config/config.js"></script>
+                                                <script type="text/javascript" src="./js/jsterm.js"></script>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="bodyDecor">
+                                <div class="floppyDriveContainer">
+                                    <div class="floppyDrive">
+                                        <div class="floppyShade"></div>
+                                        <div class="floppyShadeDarker"></div>
+                                        <div class="floppySlot"></div>
+                                    </div>
+                                </div>
+                                <div class="logoContainer">
+                                    <div class="logo"></div>
+                                </div>
+                            </section>
+                            <section class="bottomDecor">
+                                <div class="bottomButton"></div>
+                            </section>
+                        </main>
+                    </div>
+
+                </div>
+
+                <div class="col-md-2">
+                </div>
+
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2>Skills</h2>
+                    <hr class="small" style="color-primary-0">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <div class="skills-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-keyboard-o fa-stack-1x color-primary-0"></i>
+                            </span>
+                                <h4>
+                                    <strong>Programming Tools</strong>
+                                </h4>
+                                <p>Visual Studio<br> Git | Vim<br> Unity
+                                    <br> AndroidStudio
+                                </p>
+                                <a href="#" class="btn btn-dark">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="skills-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-language fa-stack-1x color-primary-0"></i>
+                            </span>
+                                <h4>
+                                    <strong>Languages</strong>
+                                </h4>
+                                <p>OCaml | Python<br> C | C++ | Java<br> Prolog
+                                    <br> JavaScript
+                                </p>
+                                <a href="#" class="btn btn-dark">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="skills-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-clipboard fa-stack-1x color-primary-0"></i>
+                            </span>
+                                <h4>
+                                    <strong>Experience</strong>
+                                </h4>
+                                <p>OpenGL<br> GLSL Shaders<br> Web Development<br> &nbsp
+                                </p>
+                                <a href="#" class="btn btn-dark">Learn More</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="skills-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-hdd-o fa-stack-1x color-primary-0"></i>
+                            </span>
+                                <h4>
+                                    <strong>Operating Systems</strong>
+                                </h4>
+                                <p>Windows<br> MacOS
+                                    <br> Linux
+                                    <br> &nbsp
+                                </p>
+                                <a href="#" class="btn btn-dark">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Education -->
+<!--
+    <section id="education" class="education">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2>Education</h3>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h4>University of California, San Diego</h4>
+                            <h5 class="small">B.S. Computer Science</h5>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>2013-2017</h5>
+                            <h5 class="small">La Jolla, CA</h5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            Project 1
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            Project 2
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            Project 3
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            Project 4
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+-->
+
+    <!-- Callout -->
+<!--
+    <aside class="callout">
+        <div class="text-vertical-center">
+            <h1>Vertically Centered Text</h1>
+        </div>
+    </aside>
+-->
+
+    <!-- Portfolio -->
+
+
+    <!-- Call to Action -->
+<!--
+    <aside class="call-to-action bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3>The buttons below are impossible to resist.</h3>
+                    <a href="#" class="btn btn-lg btn-light">Click Me!</a>
+                    <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
+                </div>
+            </div>
+        </div>
+    </aside>
+-->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4><strong>Sebastian Dang</strong>
+                    </h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <i class="fa fa-envelope-o fa-fw"></i><a href="mailto:sebastiandang95@gmail.com">sebastiandang95@gmail.com</a>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="https://www.linkedin.com/in/sebastiandang"><i class="fa fa-linkedin-square fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/sebastiandang"><i class="fa fa-github-square fa-fw fa-3x"></i></a>
+                        </li>
+
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">2017 Copyright &copy; Sebastian Dang</p>
+                </div>
+            </div>
+        </div>
+        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Typed -->
+    <script src="js/typed.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    //#to-top button appears after scrolling
+    var fixed = false;
+    $(document).scroll(function() {
+        if ($(this).scrollTop() > 250) {
+            if (!fixed) {
+                fixed = true;
+                // $('#to-top').css({position:'fixed', display:'block'});
+                $('#to-top').show("slow", function() {
+                    $('#to-top').css({
+                        position: 'fixed',
+                        display: 'block'
+                    });
+                });
+            }
+        } else {
+            if (fixed) {
+                fixed = false;
+                $('#to-top').hide("slow", function() {
+                    $('#to-top').css({
+                        display: 'none'
+                    });
+                });
+            }
+        }
+    });
+    //End Script
+    </script>
+    <script>
+    //#typewriter
+    $(function(){
+        $("#typed").typed({
+            strings: ["Soft^50ware ^120 Engineer", "Web ^50 Developer", "3D ^150 Graphics ^100 Wizard", "Explore^40r"],
+            // typing speed
+            typeSpeed: 80,
+            // time before typing starts
+            startDelay: 500,
+            // backspacing speed
+            backSpeed: 40,
+            // shuffle the strings
+            shuffle: false,
+            // time before backspacing
+            backDelay: 700,
+            // loop
+            loop: true,
+            // false = infinite
+            loopCount: false,
+            // show cursor
+            showCursor: true,
+            // character for cursor
+            cursorChar: "_",
+            // attribute to type (null == text)
+            attr: null,
+            // either html or text
+            contentType: 'text',
+            // custom backspace
+        });
+    });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+{
+   "type": "dir",
+   "name": "~",
+   "contents": [
+      {
+         "type": "text",
+         "name": "welcome",
+         "contents": "Welcome to my website. You can use this terminal to learn more about me and my current projects. If you don't have any experience using a computer terminal, simply type 'help' to learn how to navigate through mine."
+      },
+      {
+         "type": "text",
+         "name": "about",
+         "contents": "My name is Sebastian.<br><br>I'm currently working at the<br>Office of Engineering Computing.<br><br>I'm a 4th Year Computer Science Major at the<br>University of California, San Diego.<br>"
+      },
+      {
+         "type": "dir",
+         "name": "experience",
+         "contents": [
+            {
+               "type": "exec",
+               "name": "oec",
+               "contents": "http://support.eng.ucsd.edu/",
+               "description": "Office of Engineering Computing"
+            },
+            {
+               "type": "exec",
+               "name": "cse",
+               "contents": "http://cse.ucsd.edu",
+               "description": "Computer Science and Engineering Department"
+            }
+         ]
+      },
+      {
+         "type": "dir",
+         "name": "projects",
+         "contents": [
+            {
+               "type": "exec",
+               "name": "DontStarve",
+               "contents": "https://github.com/SebastianDang/DontStarve",
+               "description": "Don't Starve is a simple Android Application built for a software engineering class (CSE110). Although the application is far from complete, it taught me a lot about agile development and working with customers whose demands can range from superficial to realistic."
+            },
+            {
+               "type": "exec",
+               "name": "OpenGL",
+               "contents": "https://github.com/SebastianDang/OpenGL_Concepts/commits/master",
+               "description": "After taking a Computer Graphics course, I wanted to dive more into the OpenGL concepts I learned towards the end of the class. This application replicates water using Frame Buffer Objects for both reflection and refraction, clipping planes, and DU/DV maps to create a wavy effect. Currently, I'm working on making this more realistic to mimic the basic properties of water."
+            },
+            {
+               "type": "exec",
+               "name": "More",
+               "contents": "https://github.com/SebastianDang/",
+               "description": "More to come on my Github."
+            }
+         ]
+      }
+   ]
+}
