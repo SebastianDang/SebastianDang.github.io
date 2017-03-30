@@ -205,7 +205,7 @@
     </section>
 
     <!-- Education -->
-<!--
+    <!--
     <section id="education" class="education">
         <div class="container">
             <div class="row">
@@ -248,7 +248,7 @@
 -->
 
     <!-- Callout -->
-<!--
+    <!--
     <aside class="callout">
         <div class="text-vertical-center">
             <h1>Vertically Centered Text</h1>
@@ -260,7 +260,7 @@
 
 
     <!-- Call to Action -->
-<!--
+    <!--
     <aside class="call-to-action bg-primary">
         <div class="container">
             <div class="row">
@@ -315,88 +315,93 @@
 
     <!-- Custom Theme JavaScript -->
     <script>
-    // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-    // Scrolls to the selected menu item on the page
-    $(function() {
-        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
+        // Closes the sidebar menu
+        $("#menu-close").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Opens the sidebar menu
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Scrolls to the selected menu item on the page
+        $(function() {
+            $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+        //#to-top button appears after scrolling
+        var fixed = false;
+        $(document).scroll(function() {
+            if ($(this).scrollTop() > 250) {
+                if (!fixed) {
+                    fixed = true;
+                    // $('#to-top').css({position:'fixed', display:'block'});
+                    $('#to-top').show("slow", function() {
+                        $('#to-top').css({
+                            position: 'fixed',
+                            display: 'block'
+                        });
+                    });
+                }
+            } else {
+                if (fixed) {
+                    fixed = false;
+                    $('#to-top').hide("slow", function() {
+                        $('#to-top').css({
+                            display: 'none'
+                        });
+                    });
                 }
             }
         });
-    });
-    //#to-top button appears after scrolling
-    var fixed = false;
-    $(document).scroll(function() {
-        if ($(this).scrollTop() > 250) {
-            if (!fixed) {
-                fixed = true;
-                // $('#to-top').css({position:'fixed', display:'block'});
-                $('#to-top').show("slow", function() {
-                    $('#to-top').css({
-                        position: 'fixed',
-                        display: 'block'
-                    });
-                });
-            }
-        } else {
-            if (fixed) {
-                fixed = false;
-                $('#to-top').hide("slow", function() {
-                    $('#to-top').css({
-                        display: 'none'
-                    });
-                });
-            }
-        }
-    });
-    //End Script
+        //End Script
     </script>
     <script>
-    //#typewriter
-    $(function(){
-        $("#typed").typed({
-            strings: ["Soft^50ware ^120 Engineer", "Web ^50 Developer", "3D ^150 Graphics ^100 Wizard", "Explore^40r"],
-            // typing speed
-            typeSpeed: 80,
-            // time before typing starts
-            startDelay: 500,
-            // backspacing speed
-            backSpeed: 40,
-            // shuffle the strings
-            shuffle: false,
-            // time before backspacing
-            backDelay: 700,
-            // loop
-            loop: true,
-            // false = infinite
-            loopCount: false,
-            // show cursor
-            showCursor: true,
-            // character for cursor
-            cursorChar: "_",
-            // attribute to type (null == text)
-            attr: null,
-            // either html or text
-            contentType: 'text',
-            // custom backspace
+        //#typewriter
+        $(function() {
+            $("#typed").typed({
+                strings: ["Soft^50ware ^120 Engineer", "Web ^50 Developer", "3D ^150 Graphics ^100 Wizard", "Explore^40r"],
+                // typing speed
+                typeSpeed: 80,
+                // time before typing starts
+                startDelay: 500,
+                // backspacing speed
+                backSpeed: 40,
+                // shuffle the strings
+                shuffle: false,
+                // time before backspacing
+                backDelay: 700,
+                // loop
+                loop: true,
+                // false = infinite
+                loopCount: false,
+                // show cursor
+                showCursor: true,
+                // character for cursor
+                cursorChar: "_",
+                // attribute to type (null == text)
+                attr: null,
+                // either html or text
+                contentType: 'text',
+                // custom backspace
+            });
         });
-    });
+    </script>
+    <script>
+
+
+    
     </script>
 
 </body>

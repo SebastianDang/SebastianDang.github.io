@@ -100,7 +100,7 @@
             var key = (e.which) ? e.which : e.keyCode;
 
             if (key == 8 || key == 9 || key == 13 || key == 46 || key == 38 ||
-                key == 40 || e.ctrlKey)
+                key == 40 || key == 32 || e.ctrlKey)
                e.preventDefault();
             this._handleSpecialKey(key, e);
          }.bind(this);
@@ -451,6 +451,9 @@
                 this._prompt();
                 stdout.innerHTML = buffer;
             }.bind(this));
+         // Space
+         } else if (key == 32){
+            stdout.innerHTML += ' ';
          }
       },
 
