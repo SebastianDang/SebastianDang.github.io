@@ -78,41 +78,21 @@
 
                 <div class="col-lg-8">
 
-                    <div class="root">
-                        <main class="computerContainer">
-                            <section class="screenContainer">
-                                <div class="screenFrame">
-                                    <div class="screen">
-                                        <div class="terminal">
+                    <div class="terminal-window">
+                        <header>
+                            <div class="button green"></div>
+                            <div class="button yellow"></div>
+                            <div class="button red"></div>
+                        </header>
+                        <section class="terminal">
 
+                            <div id="jsterm_container">
+                                <script type="text/javascript" src="./commands/com1.js"></script>
+                                <script type="text/javascript" src="./config/config.js"></script>
+                                <script type="text/javascript" src="./js/jsterm.js"></script>
+                            </div>
 
-                                            <div id="jsterm_container">
-                                                <script type="text/javascript" src="./commands/com1.js"></script>
-                                                <script type="text/javascript" src="./config/config.js"></script>
-                                                <script type="text/javascript" src="./js/jsterm.js"></script>
-                                            </div>
-
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                            <section class="bodyDecor">
-                                <div class="floppyDriveContainer">
-                                    <div class="floppyDrive">
-                                        <div class="floppyShade"></div>
-                                        <div class="floppyShadeDarker"></div>
-                                        <div class="floppySlot"></div>
-                                    </div>
-                                </div>
-                                <div class="logoContainer">
-                                    <div class="logo"></div>
-                                </div>
-                            </section>
-                            <section class="bottomDecor">
-                                <div class="bottomButton"></div>
-                            </section>
-                        </main>
+                        </section>
                     </div>
 
                 </div>
@@ -158,8 +138,7 @@
                                 <h4>
                                     <strong>Languages</strong>
                                 </h4>
-                                <p>OCaml | Python<br> C | C++ | Java<br> Prolog
-                                    <br> JavaScript
+                                <p>OCaml | Python<br> C | C++ | Java<br> Prolog<br> JavaScript
                                 </p>
                                 <a href="#" class="btn btn-dark">Learn More</a>
                             </div>
@@ -203,76 +182,6 @@
         </div>
         <!-- /.container -->
     </section>
-
-    <!-- Education -->
-    <!--
-    <section id="education" class="education">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <h2>Education</h3>
-                    <hr>
-                    <div class="row">
-                        <div class="col-md-9">
-                            <h4>University of California, San Diego</h4>
-                            <h5 class="small">B.S. Computer Science</h5>
-                        </div>
-                        <div class="col-md-3">
-                            <h5>2013-2017</h5>
-                            <h5 class="small">La Jolla, CA</h5>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                            Project 1
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            Project 2
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            Project 3
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            Project 4
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-
-    </section>
-
--->
-
-    <!-- Callout -->
-    <!--
-    <aside class="callout">
-        <div class="text-vertical-center">
-            <h1>Vertically Centered Text</h1>
-        </div>
-    </aside>
--->
-
-    <!-- Portfolio -->
-
-
-    <!-- Call to Action -->
-    <!--
-    <aside class="call-to-action bg-primary">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h3>The buttons below are impossible to resist.</h3>
-                    <a href="#" class="btn btn-lg btn-light">Click Me!</a>
-                    <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
-                </div>
-            </div>
-        </div>
-    </aside>
--->
 
     <!-- Footer -->
     <footer>
@@ -399,9 +308,37 @@
         });
     </script>
     <script>
+        //#draggable
+        function handle_mousedown(e) {
+            window.draggable = {};
+            draggable.pageX0 = e.pageX;
+            draggable.pageY0 = e.pageY;
+            draggable.elem = this;
+            draggable.offset0 = $(this).offset();
 
+            function handle_dragging(e) {
+                var left = draggable.offset0.left + (e.pageX - draggable.pageX0);
+                var top = draggable.offset0.top + (e.pageY - draggable.pageY0);
+                $(draggable.elem)
+                    .offset({
+                        top: top,
+                        left: left
+                    });
+            }
 
-    
+            function handle_mouseup(e) {
+                $('body')
+                    .off('mousemove', handle_dragging)
+                    .off('mouseup', handle_mouseup);
+            }
+
+            $('body')
+                .on('mouseup', handle_mouseup)
+                .on('mousemove', handle_dragging);
+
+        }
+        //Add draggable items here.
+        $('.terminal-window').mousedown(handle_mousedown);
     </script>
 
 </body>
