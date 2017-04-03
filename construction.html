@@ -77,7 +77,7 @@
                 </div>
 
                 <div class="col-lg-8">
-
+                    <!-- Terminal Window -->
                     <div class="terminal-window">
                         <header>
                             <div class="button green"></div>
@@ -89,12 +89,11 @@
                             <div id="jsterm_container">
                                 <script type="text/javascript" src="./commands/com1.js"></script>
                                 <script type="text/javascript" src="./config/config.js"></script>
-                                <script type="text/javascript" src="./js/jsterm.js"></script>
+                                <!-- <script type="text/javascript" src="./js/jsterm.js"></script> -->
                             </div>
 
                         </section>
                     </div>
-
                 </div>
 
                 <div class="col-md-2">
@@ -339,6 +338,30 @@
         }
         //Add draggable items here.
         $('.terminal-window').mousedown(handle_mousedown);
+    </script>
+    <script>
+        var called = false;
+        var hT = $('#jsterm_container').offset().top;
+
+        //Trigger.
+        var trigger = function() {
+            called = true;
+            $.getScript('./js/jsterm.js', function(){});
+        };
+        //Scroll function.
+        $(window).scroll(function() {
+            //Check if already enabled.
+            if (called) { return; }
+            //Calculate the scroll offset.
+            var hH = $('#jsterm_container').outerHeight(),
+                wH = $(window).height(),
+                wS = $(this).scrollTop();
+            //Check the scroll.
+            if (wS > (hT + hH - wH) && (hT > wS) && (wS + wH > hT + hH)) {
+                trigger();
+            }
+        });
+
     </script>
 
 </body>
