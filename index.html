@@ -16,6 +16,7 @@
 
     <!-- Custom CSS -->
     <link href="css/styles.css" rel="stylesheet">
+    <link href="css/jsterm.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -33,21 +34,21 @@
 <body>
 
     <!-- Navigation -->
-    <!-- <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
-                <a href="#top" onclick=$("#menu-close").click();>Sebastian Dang</a>
+                <a href="#top" onclick=$( "#menu-close").click();>Sebastian Dang</a>
             </li>
             <li>
-                <a href="#about" onclick=$("#menu-close").click();>About</a>
+                <a href="#about" onclick=$( "#menu-close").click();>About</a>
             </li>
             <li>
-                <a href="#skills" onclick=$("#menu-close").click();>Skills</a>
+                <a href="#skills" onclick=$( "#menu-close").click();>Skills</a>
             </li>
         </ul>
-    </nav> -->
+    </nav>
 
     <!-- Header -->
     <header id="top" class="header">
@@ -57,11 +58,52 @@
             <!--Typewriter-->
             <h3><span id="typed"></span></h3><br>
             <!--Button-->
-            <!-- <a href="#about" class="btn btn-dark btn-lg">Continue</a> -->
+            <a href="#about" class="btn btn-dark btn-lg">Continue</a>
         </div>
     </header>
 
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1>About Me</h1>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
 
+                <div class="col-lg-8 col-lg-offset-2">
+                    <!-- Terminal Window -->
+                    <div class="terminal-window">
+                        <header>
+                            <div class="button green"></div>
+                            <div class="button yellow"></div>
+                            <div class="button red"></div>
+                        </header>
+                        <section class="terminal">
+
+                            <div id="jsterm_container">
+                                <script type="text/javascript" src="./commands/com1.js"></script>
+                                <script type="text/javascript" src="./config/config.js"></script>
+                                <!--  Will be added in ONCE through script below. -->
+                                <!-- <script type="text/javascript" src="./js/jsterm.js"></script> -->
+                            </div>
+
+                        </section>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                </div>
+
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <hr>
 
     <!-- Footer -->
     <footer>
@@ -104,88 +146,149 @@
 
     <!-- Custom Theme JavaScript -->
     <script>
-    // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#sidebar-wrapper").toggleClass("active");
-    });
-    // Scrolls to the selected menu item on the page
-    $(function() {
-        $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
-            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-                if (target.length) {
-                    $('html,body').animate({
-                        scrollTop: target.offset().top
-                    }, 1000);
-                    return false;
+        // Closes the sidebar menu
+        $("#menu-close").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Opens the sidebar menu
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Scrolls to the selected menu item on the page
+        $(function() {
+            $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+        //#to-top button appears after scrolling
+        var fixed = false;
+        $(document).scroll(function() {
+            if ($(this).scrollTop() > 250) {
+                if (!fixed) {
+                    fixed = true;
+                    // $('#to-top').css({position:'fixed', display:'block'});
+                    $('#to-top').show("slow", function() {
+                        $('#to-top').css({
+                            position: 'fixed',
+                            display: 'block'
+                        });
+                    });
+                }
+            } else {
+                if (fixed) {
+                    fixed = false;
+                    $('#to-top').hide("slow", function() {
+                        $('#to-top').css({
+                            display: 'none'
+                        });
+                    });
                 }
             }
         });
-    });
-    //#to-top button appears after scrolling
-    var fixed = false;
-    $(document).scroll(function() {
-        if ($(this).scrollTop() > 250) {
-            if (!fixed) {
-                fixed = true;
-                // $('#to-top').css({position:'fixed', display:'block'});
-                $('#to-top').show("slow", function() {
-                    $('#to-top').css({
-                        position: 'fixed',
-                        display: 'block'
-                    });
-                });
-            }
-        } else {
-            if (fixed) {
-                fixed = false;
-                $('#to-top').hide("slow", function() {
-                    $('#to-top').css({
-                        display: 'none'
-                    });
-                });
-            }
+        //End Script
+        //Always scroll to top on load.
+        window.onbeforeunload = function () {
+          window.scrollTo(0, 0);
         }
-    });
-    //End Script
     </script>
     <script>
-    //#typewriter
-    $(function(){
-        $("#typed").typed({
-            strings: ["Soft^50ware ^120 Engineer", "Web ^50 Developer", "3D ^150 Graphics ^100 Wizard", "Explore^40r"],
-            // typing speed
-            typeSpeed: 80,
-            // time before typing starts
-            startDelay: 500,
-            // backspacing speed
-            backSpeed: 40,
-            // shuffle the strings
-            shuffle: false,
-            // time before backspacing
-            backDelay: 700,
-            // loop
-            loop: true,
-            // false = infinite
-            loopCount: false,
-            // show cursor
-            showCursor: true,
-            // character for cursor
-            cursorChar: "_",
-            // attribute to type (null == text)
-            attr: null,
-            // either html or text
-            contentType: 'text',
-            // custom backspace
+        //#typewriter
+        $(function() {
+            $("#typed").typed({
+                strings: ["Soft^50ware ^120 Engineer", "Web ^50 Developer", "3D ^150 Graphics ^100 Wizard", "Explore^40r"],
+                // typing speed
+                typeSpeed: 80,
+                // time before typing starts
+                startDelay: 500,
+                // backspacing speed
+                backSpeed: 40,
+                // shuffle the strings
+                shuffle: false,
+                // time before backspacing
+                backDelay: 700,
+                // loop
+                loop: true,
+                // false = infinite
+                loopCount: false,
+                // show cursor
+                showCursor: true,
+                // character for cursor
+                cursorChar: "_",
+                // attribute to type (null == text)
+                attr: null,
+                // either html or text
+                contentType: 'text',
+                // custom backspace
+            });
         });
-    });
+    </script>
+    <script>
+        //#draggable
+        function handle_mousedown(e) {
+            window.draggable = {};
+            draggable.pageX0 = e.pageX;
+            draggable.pageY0 = e.pageY;
+            draggable.elem = this;
+            draggable.offset0 = $(this).offset();
+
+            function handle_dragging(e) {
+                var left = draggable.offset0.left + (e.pageX - draggable.pageX0);
+                var top = draggable.offset0.top + (e.pageY - draggable.pageY0);
+                $(draggable.elem)
+                    .offset({
+                        top: top,
+                        left: left
+                    });
+            }
+
+            function handle_mouseup(e) {
+                $('body')
+                    .off('mousemove', handle_dragging)
+                    .off('mouseup', handle_mouseup);
+            }
+
+            $('body')
+                .on('mouseup', handle_mouseup)
+                .on('mousemove', handle_dragging);
+
+        }
+        //Add draggable items here.
+        $('.terminal-window').mousedown(handle_mousedown);
+    </script>
+    <script>
+        var called = false;
+        var hT = $('#jsterm_container').offset().top;
+        //Trigger.
+        var trigger = function() {
+            called = true;
+            $.getScript('./js/jsterm.js', function() {});
+        };
+        //Scroll function.
+        $(window).scroll(function() {
+            //Check if already enabled.
+            if (called) {
+                return;
+            }
+            //Calculate the scroll offset.
+            var hH = $('#jsterm_container').outerHeight(),
+                wH = $(window).height(),
+                wS = $(this).scrollTop();
+            //Check the scroll.
+            if (wS > (hT + hH - wH) && (hT > wS) && (wS + wH > hT + hH)) {
+                trigger();
+            }
+        });
     </script>
 
 </body>
