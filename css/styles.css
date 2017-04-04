@@ -1,10 +1,10 @@
 /*!
  */
 
+
 /* Global Styles */
 
-html,
-body {
+html, body {
     width: 100%;
     height: 100%;
 }
@@ -27,39 +27,38 @@ body {
     font-weight: 700;
 }
 
+
 /* Custom Button Styles */
 
 .btn-dark {
     border-radius: 0;
     color: #fff;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
-.btn-dark:hover,
-.btn-dark:focus,
-.btn-dark:active {
+.btn-dark:hover, .btn-dark:focus, .btn-dark:active {
     color: #fff;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .btn-light {
     border-radius: 0;
     color: #333;
-    background-color: rgb(255,255,255);
+    background-color: rgb(255, 255, 255);
 }
 
-.btn-light:hover,
-.btn-light:focus,
-.btn-light:active {
+.btn-light:hover, .btn-light:focus, .btn-light:active {
     color: #333;
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(255, 255, 255, 0.8);
 }
+
 
 /* Custom Horizontal Rule */
 
 hr.small {
     max-width: 100px;
 }
+
 
 /* Side Menu */
 
@@ -102,25 +101,24 @@ hr.small {
 .sidebar-nav li a:hover {
     text-decoration: none;
     color: #fff;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.2);
 }
 
-.sidebar-nav li a:active,
-.sidebar-nav li a:focus {
+.sidebar-nav li a:active, .sidebar-nav li a:focus {
     text-decoration: none;
 }
 
-.sidebar-nav > .sidebar-brand {
+.sidebar-nav>.sidebar-brand {
     height: 55px;
     font-size: 18px;
     line-height: 55px;
 }
 
-.sidebar-nav > .sidebar-brand a {
+.sidebar-nav>.sidebar-brand a {
     color: #999;
 }
 
-.sidebar-nav > .sidebar-brand a:hover {
+.sidebar-nav>.sidebar-brand a:hover {
     color: #fff;
     background: none;
 }
@@ -146,6 +144,7 @@ hr.small {
     margin: 5px 5px 0 0;
 }
 
+
 /* Header */
 
 .header {
@@ -161,7 +160,7 @@ hr.small {
     -o-background-size: cover;
 }
 
-.header2{
+.header2 {
     display: table;
     position: relative;
     width: 100%;
@@ -173,87 +172,111 @@ hr.small {
     -o-background-size: initial;
 }
 
+
 /* Blinking Text */
 
 .blinking-text {
-  font-weight: 100;
-  font-size: 30px;
-  color: #2E3D48;
-  -webkit-animation: 1s blink step-end infinite;
-  -moz-animation: 1s blink step-end infinite;
-  -ms-animation: 1s blink step-end infinite;
-  -o-animation: 1s blink step-end infinite;
-  animation: 1s blink step-end infinite;
+    font-weight: 100;
+    font-size: 30px;
+    color: #2E3D48;
+    -webkit-animation: 1s blink step-end infinite;
+    -moz-animation: 1s blink step-end infinite;
+    -ms-animation: 1s blink step-end infinite;
+    -o-animation: 1s blink step-end infinite;
+    animation: 1s blink step-end infinite;
 }
 
 @keyframes "blink" {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: black;
-  }
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: black;
+    }
 }
 
 @-moz-keyframes blink {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: black;
-  }
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: black;
+    }
 }
 
 @-webkit-keyframes "blink" {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: black;
-  }
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: black;
+    }
 }
 
 @-ms-keyframes "blink" {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: black;
-  }
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: black;
+    }
 }
 
 @-o-keyframes "blink" {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: black;
-  }
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: black;
+    }
 }
+
 
 /* Typed Cursor */
 
-.typed-cursor{
+.typed-cursor {
     opacity: 1;
     -webkit-animation: blink 0.7s infinite;
     -moz-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
 }
-@keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
-@-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
-@-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
+
 
 /* About */
 
@@ -263,7 +286,9 @@ hr.small {
     min-height: 100%;
 }
 
+
 /* Calendar */
+
 .calendar {
     display: table;
     position: relative;
@@ -271,7 +296,9 @@ hr.small {
     height: 100%;
 }
 
+
 /* Bucket List */
+
 .bucketlist {
     width: 100%;
     height: 100%;
@@ -282,41 +309,46 @@ hr.small {
     margin-bottom: 30px;
 }
 
+
 /* Custom Panels */
+
 .panel-image img.panel-image-preview {
     width: 100%;
-	border-radius: 4px 4px 0px 0px;
+    border-radius: 4px 4px 0px 0px;
 }
 
-.panel-heading ~ .panel-image img.panel-image-preview {
-	border-radius: 0px;
+.panel-heading~.panel-image img.panel-image-preview {
+    border-radius: 0px;
 }
 
-.panel-image ~ .panel-body, .panel-image.hide-panel-body ~ .panel-body {
-	overflow: hidden;
-}
-.panel-image ~ .panel-footer a {
-	padding: 0px 10px;
-	font-size: 1.3em;
-	color: rgb(100, 100, 100);
+.panel-image~.panel-body, .panel-image.hide-panel-body~.panel-body {
+    overflow: hidden;
 }
 
-.panel-image.hide-panel-body ~ .panel-body {
-	height: 0px;
-	padding: 0px;
+.panel-image~.panel-footer a {
+    padding: 0px 10px;
+    font-size: 1.3em;
+    color: rgb(100, 100, 100);
 }
 
-.panel-default > .panel-custom{
+.panel-image.hide-panel-body~.panel-body {
+    height: 0px;
+    padding: 0px;
+}
+
+.panel-default>.panel-custom {
     color: black;
 }
 
-.alignLeft{
+.alignLeft {
     float: left;
 }
 
-.alignRight{
+.alignRight {
     float: right;
 }
+
+
 /* Skills */
 
 .skills {
@@ -332,10 +364,11 @@ hr.small {
     /*color: #3B90A4;*/
 }
 
-/* Food */
-.food {
 
-}
+/* Food */
+
+.food {}
+
 
 /* Callout */
 
@@ -350,6 +383,7 @@ hr.small {
     background-size: cover;
     -o-background-size: cover;
 }
+
 
 /* Portfolio */
 
@@ -369,6 +403,7 @@ hr.small {
     opacity: 0.8;
 }
 
+
 /* Call to Action */
 
 .call-to-action {
@@ -387,63 +422,173 @@ footer {
 }
 
 #to-top {
-  display: none;
-  position: fixed;
-  bottom: 5px;
-  right: 5px;
+    display: none;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
 }
-
 
 
 /* Custom Colors */
 
-/* Palette color codes */
-/* Palette URL: http://paletton.com/#uid=33n0z0kl7xWbdPwgIGepou0tcoR */
 
-/* Feel free to copy&paste color codes to your application */
+/* Palette color codes */
+
+
+/* Palette URL: http://paletton.com/#uid=33n0z0kl7xWbdPwgIGepou0tcoR */
 
 
 /* As hex codes */
 
-.color-primary-0 { color: #3B90A4 }	/* Main Primary color */
-.color-primary-1 { color: #91CEDC } /* 1 */
-.color-primary-2 { color: #5FADC0 } /* 2 */
-.color-primary-3 { color: #227E94 } /* 4 */
-.color-primary-4 { color: #0E667B } /* 5 */
+.color-primary-0 {
+    color: #3B90A4
+}
 
-.color-secondary-1-0 { color: #FF5757 }	/* Main Secondary color (1) */
-.color-secondary-1-1 { color: #FFA6A6 }
-.color-secondary-1-2 { color: #FF7A7A }
-.color-secondary-1-3 { color: #EF3131 }
-.color-secondary-1-4 { color: #C61111 }
 
-.color-secondary-2-0 { color: #FFD057 }	/* Main Secondary color (2) */
-.color-secondary-2-1 { color: #FFE6A6 }
-.color-secondary-2-2 { color: #FFDA7A }
-.color-secondary-2-3 { color: #EFBB31 }
-.color-secondary-2-4 { color: #C69411 }
+/* Main Primary color */
+
+.color-primary-1 {
+    color: #91CEDC
+}
+
+
+/* 1 */
+
+.color-primary-2 {
+    color: #5FADC0
+}
+
+
+/* 2 */
+
+.color-primary-3 {
+    color: #227E94
+}
+
+
+/* 4 */
+
+.color-primary-4 {
+    color: #0E667B
+}
+
+
+/* 5 */
+
+.color-secondary-1-0 {
+    color: #FF5757
+}
+
+
+/* Main Secondary color (1) */
+
+.color-secondary-1-1 {
+    color: #FFA6A6
+}
+
+.color-secondary-1-2 {
+    color: #FF7A7A
+}
+
+.color-secondary-1-3 {
+    color: #EF3131
+}
+
+.color-secondary-1-4 {
+    color: #C61111
+}
+
+.color-secondary-2-0 {
+    color: #FFD057
+}
+
+
+/* Main Secondary color (2) */
+
+.color-secondary-2-1 {
+    color: #FFE6A6
+}
+
+.color-secondary-2-2 {
+    color: #FFDA7A
+}
+
+.color-secondary-2-3 {
+    color: #EFBB31
+}
+
+.color-secondary-2-4 {
+    color: #C69411
+}
+
 
 /* As RGBa codes */
 
-.rgba-primary-0 { color: rgba( 59,144,164,1) }	/* Main Primary color */
-.rgba-primary-1 { color: rgba(145,206,220,1) }
-.rgba-primary-2 { color: rgba( 95,173,192,1) }
-.rgba-primary-3 { color: rgba( 34,126,148,1) }
-.rgba-primary-4 { color: rgba( 14,102,123,1) }
-
-.rgba-secondary-1-0 { color: rgba(255, 87, 87,1) }	/* Main Secondary color (1) */
-.rgba-secondary-1-1 { color: rgba(255,166,166,1) }
-.rgba-secondary-1-2 { color: rgba(255,122,122,1) }
-.rgba-secondary-1-3 { color: rgba(239, 49, 49,1) }
-.rgba-secondary-1-4 { color: rgba(198, 17, 17,1) }
-
-.rgba-secondary-2-0 { color: rgba(255,208, 87,1) }	/* Main Secondary color (2) */
-.rgba-secondary-2-1 { color: rgba(255,230,166,1) }
-.rgba-secondary-2-2 { color: rgba(255,218,122,1) }
-.rgba-secondary-2-3 { color: rgba(239,187, 49,1) }
-.rgba-secondary-2-4 { color: rgba(198,148, 17,1) }
+.rgba-primary-0 {
+    color: rgba( 59, 144, 164, 1)
+}
 
 
+/* Main Primary color */
 
-/* Generated by Paletton.com © 2002-2014 */
-/* http://paletton.com */
+.rgba-primary-1 {
+    color: rgba(145, 206, 220, 1)
+}
+
+.rgba-primary-2 {
+    color: rgba( 95, 173, 192, 1)
+}
+
+.rgba-primary-3 {
+    color: rgba( 34, 126, 148, 1)
+}
+
+.rgba-primary-4 {
+    color: rgba( 14, 102, 123, 1)
+}
+
+.rgba-secondary-1-0 {
+    color: rgba(255, 87, 87, 1)
+}
+
+
+/* Main Secondary color (1) */
+
+.rgba-secondary-1-1 {
+    color: rgba(255, 166, 166, 1)
+}
+
+.rgba-secondary-1-2 {
+    color: rgba(255, 122, 122, 1)
+}
+
+.rgba-secondary-1-3 {
+    color: rgba(239, 49, 49, 1)
+}
+
+.rgba-secondary-1-4 {
+    color: rgba(198, 17, 17, 1)
+}
+
+.rgba-secondary-2-0 {
+    color: rgba(255, 208, 87, 1)
+}
+
+
+/* Main Secondary color (2) */
+
+.rgba-secondary-2-1 {
+    color: rgba(255, 230, 166, 1)
+}
+
+.rgba-secondary-2-2 {
+    color: rgba(255, 218, 122, 1)
+}
+
+.rgba-secondary-2-3 {
+    color: rgba(239, 187, 49, 1)
+}
+
+.rgba-secondary-2-4 {
+    color: rgba(198, 148, 17, 1)
+}
