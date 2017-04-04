@@ -89,6 +89,7 @@
                             <div id="jsterm_container">
                                 <script type="text/javascript" src="./commands/com1.js"></script>
                                 <script type="text/javascript" src="./config/config.js"></script>
+                                <!--  Will be added in ONCE through script below. -->
                                 <!-- <script type="text/javascript" src="./js/jsterm.js"></script> -->
                             </div>
 
@@ -274,6 +275,10 @@
             }
         });
         //End Script
+        //Always scroll to top on load.
+        window.onbeforeunload = function () {
+          window.scrollTo(0, 0);
+        }
     </script>
     <script>
         //#typewriter
@@ -342,16 +347,17 @@
     <script>
         var called = false;
         var hT = $('#jsterm_container').offset().top;
-
         //Trigger.
         var trigger = function() {
             called = true;
-            $.getScript('./js/jsterm.js', function(){});
+            $.getScript('./js/jsterm.js', function() {});
         };
         //Scroll function.
         $(window).scroll(function() {
             //Check if already enabled.
-            if (called) { return; }
+            if (called) {
+                return;
+            }
             //Calculate the scroll offset.
             var hH = $('#jsterm_container').outerHeight(),
                 wH = $(window).height(),
@@ -361,7 +367,6 @@
                 trigger();
             }
         });
-
     </script>
 
 </body>
