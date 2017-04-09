@@ -54,6 +54,12 @@
             },
             {
                "type": "exec",
+               "name": "Charm",
+               "contents": "https://github.com/SebastianDang/Charmhttps://github.com/SebastianDang/Charm",
+               "description": "Charm is a simple framework for an android application. Initially created for a future android application that would be a social network app. However, the project was temporarily shelved, but has simple server sided authentication for user registration and login."
+            },
+            {
+               "type": "exec",
                "name": "More",
                "contents": "https://github.com/SebastianDang/",
                "description": "More to come on my Github."
