@@ -43,7 +43,7 @@
             {
                "type": "exec",
                "name": "OpenGL",
-               "contents": "https://github.com/SebastianDang/OpenGL_Concepts/commits/master",
+               "contents": "https://github.com/SebastianDang/OpenGL_Concepts",
                "description": "After taking a Computer Graphics course, I wanted to dive more into the OpenGL concepts I learned towards the end of the class. This application replicates water using Frame Buffer Objects for both reflection and refraction, clipping planes, and DU/DV maps to create a wavy effect. Currently, I'm working on making this more realistic to mimic the basic properties of water."
             },
             {
