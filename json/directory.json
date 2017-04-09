@@ -48,6 +48,12 @@
             },
             {
                "type": "exec",
+               "name": "ComputerGraphics",
+               "contents": "https://github.com/SebastianDang/CSE167_Final",
+               "description": "The Island is a final project for CSE167: Computer Graphics, using openGL and C++. This project attempts to summarize concepts learned in the course throughout the quarter and implement advanced computer graphics concepts. Some concepts were cut to meet deadlines, so some parts of the final project were not fully implemented as planned."
+            },
+            {
+               "type": "exec",
                "name": "More",
                "contents": "https://github.com/SebastianDang/",
                "description": "More to come on my Github."
