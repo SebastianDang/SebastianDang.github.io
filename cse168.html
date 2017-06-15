@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Sebastian Dang">
+
+    <title>Sebastian Dang</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/jsterm.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500|Slabo+27px" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a href="#top" onclick=$( "#menu-close").click();>Sebastian Dang</a>
+            </li>
+            <li>
+                <a href="#about" onclick=$( "#menu-close").click();>About</a>
+            </li>
+            <li>
+                <a target="_blank" href="https://www.linkedin.com/in/sebastiandang" onclick=$( "#menu-close").click();>LinkedIn</a>
+            </li>
+            <li>
+                <a target="_blank" href="https://github.com/sebastiandang" onclick=$( "#menu-close").click();>Github</a>
+            </li>
+            <li>
+                <a target="_blank" href="docs/Sebastian_Dang_Resume.pdf" onclick=$( "#menu-close").click();>Resume</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Title -->
+    <section id="about" class="about">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1>Rendering Into Unknown Territories</h1>
+                    <hr>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center text-vertical-center">
+                    <img src="img/cse168/Final.png" width = "100%">
+                    <p>Scene from an unknown planet with a red moon and distant stars. The moon casts a strong red light over the terrain.</p>
+                </div>
+            </div>
+
+            <hr><br>
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="img/cse168/0.png" width = "100%">
+                    <img src="img/cse168/1.png" width = "100%">
+                </div>
+                <div class="col-lg-6">
+                    <span class="text-center"><h4>Procedural Modeling</h4></span>
+                    <p>Using some sort of procedural displacement function, one can procedurally generate a complex model from a very simple shape. In this case, I've procedurally generated a terrain-like plane by using a simple quad and performing the <u>diamond square algorithm</u>. This resulted in various hills and mountains based on the level of smoothness and variation. The smoothness determines how many times the algorithm runs and variation determines the maximum displacement each time it runs.</p>
+                    <p><li>I started by creating a 3D array, with the y set to 0.</li></p>
+                    <p><li>The 3D array is connected in a grid, evenly distributed across x and z.</li></p>
+                    <p><li>I perform the diamond-square algorithm a limited number of times.</li></p>
+                    <p><img src="img/cse168/diamond_square.png" width = "100%"></p>
+                    <p>Since the diamond square algorithm works recursively, <i>the more the algorithm runs, the more smooth the plane gets, resulting in a flat quad again.</i></p>
+                    <p><a href="http://www.paulboxley.com/blog/2011/03/terrain-generation-mark-one" target="_blank">A Visualization of the Running Algorithm</a></p>
+                    <p><a href="https://en.wikipedia.org/wiki/Diamond-square_algorithm" target="_blank">For More Information About the Diamond-Square Algorithm</a></p>
+                    <p>After I generated the terrain, I still had to recalculate the normals, since all the points were randomly displaced.</p>
+                    <p>This can be done by looping through each vertex and use the heights of the surrounding vertices to determine the normal.</p>
+                    <p>Method 1: <a href="https://stackoverflow.com/questions/33736199/calculating-normals-for-a-height-map">We take the cross product of the vertical and horizontal vectors</a></p>
+                    <p>Method 2: <a href="https://stackoverflow.com/questions/13983189/opengl-how-to-calculate-normals-in-a-terrain-height-grid">Form the normal vector directly, using the heights of each neighbor</a></p>
+                    <p>Both are optimal solutions and can be done prior to ray tracing the scene.</p>
+                </div>
+            </div>
+
+            <hr><br>
+
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <img src="img/cse168/3.png" width = "30%">
+                    <img src="img/cse168/4.png" width = "30%">
+                    <img src="img/cse168/5.png" width = "30%">
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4><strong>Sebastian Dang</strong>
+                    </h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <i class="fa fa-envelope-o fa-fw"></i><a target="_blank" href="mailto:sebastiandang95@gmail.com">sebastiandang95@gmail.com</a>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul class="list-inline">
+                        <li>
+                            <a target="_blank" href="https://www.linkedin.com/in/sebastiandang"><i class="fa fa-linkedin-square fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://github.com/sebastiandang"><i class="fa fa-github-square fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="docs/Sebastian_Dang_Resume.pdf"><i class="fa fa-folder fa-fw fa-3x"></i></a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                    <p class="text-muted">2017 Copyright &copy; Sebastian Dang</p>
+                </div>
+            </div>
+        </div>
+        <a id="to-top" href="#top" class="btn btn-dark btn-lg"><i class="fa fa-chevron-up fa-fw fa-1x"></i></a>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Typed -->
+    <script src="js/typed.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+        // Closes the sidebar menu
+        $("#menu-close").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Opens the sidebar menu
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+        // Scrolls to the selected menu item on the page
+        $(function() {
+            $('a[href*=#]:not([href=#],[data-toggle],[data-target],[data-slide])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+        //#to-top button appears after scrolling
+        var fixed = false;
+        $(document).scroll(function() {
+            if ($(this).scrollTop() > 250) {
+                if (!fixed) {
+                    fixed = true;
+                    // $('#to-top').css({position:'fixed', display:'block'});
+                    $('#to-top').show("slow", function() {
+                        $('#to-top').css({
+                            position: 'fixed',
+                            display: 'block'
+                        });
+                    });
+                }
+            } else {
+                if (fixed) {
+                    fixed = false;
+                    $('#to-top').hide("slow", function() {
+                        $('#to-top').css({
+                            display: 'none'
+                        });
+                    });
+                }
+            }
+        });
+        //End Script
+        //Always scroll to top on load.
+        window.onbeforeunload = function() {
+            window.scrollTo(0, 0);
+        }
+    </script>
+    <script>
+        //#typewriter
+        $(function() {
+            $("#typed").typed({
+                strings: ["Soft^50ware ^120 Engineer", "Web ^50 Developer", "3D ^150 Graphics ^100 Wizard", "Explore^40r"],
+                // typing speed
+                typeSpeed: 80,
+                // time before typing starts
+                startDelay: 500,
+                // backspacing speed
+                backSpeed: 40,
+                // shuffle the strings
+                shuffle: false,
+                // time before backspacing
+                backDelay: 700,
+                // loop
+                loop: true,
+                // false = infinite
+                loopCount: false,
+                // show cursor
+                showCursor: true,
+                // character for cursor
+                cursorChar: "_",
+                // attribute to type (null == text)
+                attr: null,
+                // either html or text
+                contentType: 'text',
+                // custom backspace
+            });
+        });
+    </script>
+    <script>
+        //#draggable
+        function handle_mousedown(e) {
+            window.draggable = {};
+            draggable.pageX0 = e.pageX;
+            draggable.pageY0 = e.pageY;
+            draggable.elem = this;
+            draggable.offset0 = $(this).offset();
+
+            function handle_dragging(e) {
+                var left = draggable.offset0.left + (e.pageX - draggable.pageX0);
+                var top = draggable.offset0.top + (e.pageY - draggable.pageY0);
+                $(draggable.elem)
+                    .offset({
+                        top: top,
+                        left: left
+                    });
+            }
+
+            function handle_mouseup(e) {
+                $('body')
+                    .off('mousemove', handle_dragging)
+                    .off('mouseup', handle_mouseup);
+            }
+
+            $('body')
+                .on('mouseup', handle_mouseup)
+                .on('mousemove', handle_dragging);
+
+        }
+        //Add draggable items here.
+        $('.terminal-window').mousedown(handle_mousedown);
+    </script>
+    <script>
+        var called = false;
+        var hT = $('#jsterm_container').offset().top;
+        //Trigger.
+        var trigger = function() {
+            called = true;
+            $.getScript('./js/jsterm.js', function() {});
+        };
+        //Scroll function.
+        $(window).scroll(function() {
+            //Check if already enabled.
+            if (called) {
+                return;
+            }
+            //Calculate the scroll offset.
+            var hH = $('#jsterm_container').outerHeight(),
+                wH = $(window).height(),
+                wS = $(this).scrollTop();
+            //Check the scroll.
+            if (wS > (hT + hH - wH) && (hT > wS) && (wS + wH > hT + hH)) {
+                trigger();
+            }
+        });
+    </script>
+
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-98340175-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+</body>
+
+</html>
