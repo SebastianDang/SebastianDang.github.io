@@ -84,7 +84,7 @@
                 <div class="col-lg-6">
                     <span class="text-center"><h4>Procedural Modeling</h4></span>
                     <p>Using some procedural displacement function, one can procedurally generate a complex model from a very simple shape. In this case, I've procedurally generated a terrain-like model by using a simple quad and performing the <u>diamond square algorithm</u>.
-                        This resulted in various hills and mountains based on the level of smoothness and variation. The smoothness determines how many times the algorithm runs and variation determines the maximum displacement each time it runs.</p>
+                        This resulted in various hills and mountains based on the level of <i>smoothness</i> and <i>variation</i>. The smoothness determines how many times the algorithm runs and variation determines the maximum displacement each time it runs.</p>
                     <p>
                         <li>I started by creating a 3D array, with the y set to 0.</li>
                     </p>
@@ -95,7 +95,7 @@
                         <li>I perform the diamond-square algorithm a limited number of times.</li>
                     </p>
                     <p><img src="img/cse168/diamond_square.png" width="100%"></p>
-                    <p>Since the diamond square algorithm works recursively, <i>the more the algorithm runs, the more smooth the plane gets, resulting in a flat quad again.</i></p>
+                    <p>Since the diamond square algorithm is also a smoothing algorithm, <i>the more the algorithm runs, the smoother the plane gets</i>, resulting in a flat quad again.</p>
                     <p><a href="http://www.paulboxley.com/blog/2011/03/terrain-generation-mark-one" target="_blank">A Visualization of the Running Algorithm</a></p>
                     <p><a href="https://en.wikipedia.org/wiki/Diamond-square_algorithm" target="_blank">For More Information About the Diamond-Square Algorithm</a></p>
                     <p>After I generated the terrain, I still had to recalculate the normals, since all the points were randomly displaced.</p>
@@ -171,10 +171,11 @@
                     <h4>Adjusting the Sky to Give the Scene an Outer Space Atmosphere</h4>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2">
-                    <p>I went to see the professor to figure out what kind of project to focus on. I was curious about making a skybox or just adjusting the sky to fit the scene. I only knew of environment mapping or skybox texturing, so I wasn't sure how to approach this. He recommended a simple approach, to offset the sky color and mix it with two different colors: The zenith color and a second color as a gradient.</p>
+                    <p>I wanted to figure out what kind of environment to focus on after implementing these concepts. I was curious about making a skybox or just adjusting the sky to fit the scene. I only knew of environment mapping or skybox texturing, but I wasn't sure how to approach this. <a href="mailto:srotenberg@ucsd.edu">Steve</a> recommended a simple approach; to offset the sky color and mix it with two different colors: The zenith color and a second color as a gradient.</p>
                     <p><li>Gradient uses the y direction of the ray before it hits the sky.</li></p>
                     <p><li>Since normalized vectors range from -1 to 1, they need to be converted to 0 to 1.</li></p>
                     <p><li>The zenith color is scaled by the square root of the normal, mixed with a second color as the rest.</li></p>
+                    <p><li>This will blend the two colors based on the ray.</li></p>
                     <p><li>Noise is added randomly to simulate stars in the sky.</li></p>
                 </div>
                 <div class="col-lg-10 col-lg-offset-1 text-center">
@@ -189,9 +190,9 @@
                     <h4>Final Adjustments</h4>
                 </div>
                 <div class="col-lg-12 text-center">
-                    <img src="img/cse168/11.png" width="30%">
-                    <img src="img/cse168/12.png" width="30%">
-                    <img src="img/cse168/13.png" width="30%">
+                    <a href="img/cse168/11.png" target="_blank"><img src="img/cse168/11.png" width="30%"></a>
+                    <a href="img/cse168/12.png" target="_blank"><img src="img/cse168/12.png" width="30%"></a>
+                    <a href="img/cse168/13.png" target="_blank"><img src="img/cse168/13.png" width="30%"></a>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <br>
