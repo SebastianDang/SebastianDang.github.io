@@ -59,63 +59,139 @@
     <!-- Title -->
     <section id="about" class="about">
         <div class="container">
-
+            <!-- Title -->
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h1>Rendering Into Unknown Territories</h1>
                     <hr>
                 </div>
             </div>
-
+            <!-- Final Image -->
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center text-vertical-center">
-                    <img src="img/cse168/Final.png" width = "100%">
+                    <img src="img/cse168/Final.png" width="100%">
                     <p>Scene from an unknown planet with a red moon and distant stars. The moon casts a strong red light over the terrain.</p>
                 </div>
             </div>
-
             <hr><br>
-
+            <!-- Procedural Modeling -->
             <div class="row">
                 <div class="col-lg-6">
-                    <img src="img/cse168/0.png" width = "100%">
-                    <img src="img/cse168/1.png" width = "100%">
+                    <img src="img/cse168/0.png" width="100%">
+                    <img src="img/cse168/1.png" width="100%">
                 </div>
                 <div class="col-lg-6">
                     <span class="text-center"><h4>Procedural Modeling</h4></span>
-                    <p>Using some sort of procedural displacement function, one can procedurally generate a complex model from a very simple shape. In this case, I've procedurally generated a terrain-like plane by using a simple quad and performing the <u>diamond square algorithm</u>. This resulted in various hills and mountains based on the level of smoothness and variation. The smoothness determines how many times the algorithm runs and variation determines the maximum displacement each time it runs.</p>
-                    <p><li>I started by creating a 3D array, with the y set to 0.</li></p>
-                    <p><li>The 3D array is connected in a grid, evenly distributed across x and z.</li></p>
-                    <p><li>I perform the diamond-square algorithm a limited number of times.</li></p>
-                    <p><img src="img/cse168/diamond_square.png" width = "100%"></p>
+                    <p>Using some procedural displacement function, one can procedurally generate a complex model from a very simple shape. In this case, I've procedurally generated a terrain-like model by using a simple quad and performing the <u>diamond square algorithm</u>.
+                        This resulted in various hills and mountains based on the level of smoothness and variation. The smoothness determines how many times the algorithm runs and variation determines the maximum displacement each time it runs.</p>
+                    <p>
+                        <li>I started by creating a 3D array, with the y set to 0.</li>
+                    </p>
+                    <p>
+                        <li>The 3D array is connected in a grid, evenly distributed across x and z.</li>
+                    </p>
+                    <p>
+                        <li>I perform the diamond-square algorithm a limited number of times.</li>
+                    </p>
+                    <p><img src="img/cse168/diamond_square.png" width="100%"></p>
                     <p>Since the diamond square algorithm works recursively, <i>the more the algorithm runs, the more smooth the plane gets, resulting in a flat quad again.</i></p>
                     <p><a href="http://www.paulboxley.com/blog/2011/03/terrain-generation-mark-one" target="_blank">A Visualization of the Running Algorithm</a></p>
                     <p><a href="https://en.wikipedia.org/wiki/Diamond-square_algorithm" target="_blank">For More Information About the Diamond-Square Algorithm</a></p>
                     <p>After I generated the terrain, I still had to recalculate the normals, since all the points were randomly displaced.</p>
                     <p>This can be done by looping through each vertex and use the heights of the surrounding vertices to determine the normal.</p>
-                    <p>Method 1: <a href="https://stackoverflow.com/questions/33736199/calculating-normals-for-a-height-map">We take the cross product of the vertical and horizontal vectors</a></p>
+                    <p>Method 1: <a href="https://stackoverflow.com/questions/33736199/calculating-normals-for-a-height-map">Take the cross product of the vertical and horizontal vectors</a></p>
                     <p>Method 2: <a href="https://stackoverflow.com/questions/13983189/opengl-how-to-calculate-normals-in-a-terrain-height-grid">Form the normal vector directly, using the heights of each neighbor</a></p>
-                    <p>Both are optimal solutions and can be done prior to ray tracing the scene.</p>
+                    <p>Both are optimal solutions and can be done prior to ray tracing the scene. They essentially do the same thing as well.</p>
                 </div>
             </div>
-
             <hr><br>
-
+            <!-- Material and Lighting -->
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <img src="img/cse168/3.png" width = "30%">
-                    <img src="img/cse168/4.png" width = "30%">
-                    <img src="img/cse168/5.png" width = "30%">
+                    <img src="img/cse168/3.png" width="30%">
+                    <img src="img/cse168/4.png" width="30%">
+                    <img src="img/cse168/5.png" width="30%">
+                </div>
+                <div class="col-lg-8 col-lg-offset-2">
+                    <br>
+                    <span class="text-center"><h4>Material and Lighting</h4></span>
+                    <p>After generating some terrains, I rendered some of them with different parameters and number of vertices. I didn't how to incorporate this into a simple scene, so I instead went through different materials and lighting to enhance the edges of the model. Some of these were bright gold or dark copper. </p>
+                    <p>I used...</p>
+                    <p>
+                        <li>Ashikhmin Material with 100% in the specular component for the terrain.</li>
+                    </p>
+                    <p>
+                        <li>Previously, Lambert Material for the sphere, but now Ashikhmin Material with over 80% in the diffuse component.</li>
+                    </p>
+                    <p>
+                        <li>Direct Lighting to highlight the mountains and terrain</li>
+                    </p>
+                    <p>
+                        <li>Point Lighting to simulate the sphere emitting light, like a sun or reflecting moon.</li>
+                    </p>
+                    <p>In the end, I was able to render a scene with mountains and a sun or moon, high in the sky.</p>
+                </div>
+                <div class="col-lg-12 text-center">
+                    <img src="img/cse168/2.png" width="40%">
+                    <img src="img/cse168/6.png" width="40%">
+                </div>
+            </div>
+            <hr><br>
+            <!-- Bump Mapping-->
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h4>Bump Mapping using Normal mapping and Random Displacement</h4>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2">
+                    <p>Although the concept of bump mapping is simple, I couldn't find a function to randomly displace points in a triangle mesh that resulted in a polished model. All of them came out butchered or warped in some way that looked sloppy. I tried performing a simple displacement function, but that didn't work out. There were <strong>two</strong> different options I found relevant to the type of displacement mapping / bump mapping I wanted.</p>
+                    <ol>
+                        <li>Displace points and recalculate normals, introduced by Jim Blinn.</li>
+                        <li>Recompute the normals as if you displaced the points, but do not displace the points.</li>
+                    </ol>
+                    <p>Reference: <a href="docs/cse168/BumpMapping.pdf">Procedural Bump Mapping by Stefan Gustavson</a></p>
+                    <p>I also tried calculating and using the tangent, bitangent, and normal to orient the surface to a height map. This proved to be more difficult than I thought and I had results that produced images that were incomprehensible. Below, I applied the concept to a simple sphere. </p>
+                    <p>Reference: <a href="docs/cse168/ComputerGraphics.pdf">Interactive Computer Graphics Concepts</a></p>
+                </div>
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <img src="img/cse168/7.png" width="40%">
+                    <img src="img/cse168/8.png" width="40%">
+                </div>
+                <div class="col-lg-8 col-lg-offset-2">
+                    <br>
+                    <p>This version of bump mapping didn't look right for most cases, so I instead used Perlin Noise and performed normal mapping, then followed it by displacing points in the direction of the normal by a small random amount. This combined both components of bump mapping I wanted, and it gave a unique effect.</p>
+                    <p>Reference: <a href="docs/cse168/RayTracing.pdf">Perlin Noise with Normal Mapping</a></p>
+                    <img src="img/cse168/10.png" width="100%">
+                </div>
+            </div>
+            <hr><br>
+            <!-- Sky -->
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h4>Adjusting the Sky to Give the Scene an Outer Space Atmosphere</h4>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2">
+                    <p>I went to see the professor to figure out what kind of project to focus on. I was curious about making a skybox or just adjusting the sky to fit the scene. I only knew of environment mapping or skybox texturing, so I wasn't sure how to approach this. He recommended a simple approach, to offset the sky color and mix it with two different colors: The zenith color and a second color as a gradient.</p>
+                    <p><li>Gradient uses the y direction of the ray before it hits the sky.</li></p>
+                    <p><li>Since normalized vectors range from -1 to 1, they need to be converted to 0 to 1.</li></p>
+                    <p><li>The zenith color is scaled by the square root of the normal, mixed with a second color as the rest.</li></p>
+                    <p><li>Noise is added randomly to simulate stars in the sky.</li></p>
+                </div>
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <img src="img/cse168/gradient_clean.png" width="40%">
+                    <img src="img/cse168/gradient_noise.png" width="40%">
+                </div>
+            </div>
+            <hr><br>
+            <!-- Miscellaneous Adjustments -->
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <img src="img/cse168/11.png" width="30%">
+                    <img src="img/cse168/12.png" width="30%">
+                    <img src="img/cse168/13.png" width="30%">
                 </div>
 
 
-
             </div>
-
-
-
-
-
         </div>
         <!-- /.container -->
     </section>
