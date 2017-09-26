@@ -66,6 +66,12 @@
             },
             {
                "type": "exec",
+               "name": "Rendering",
+               "contents": "/cse168.html",
+               "description": "This rendered picture is the result of a final project for an advanced computer graphics course. It utilizes different graphical techniques, particularly in ray and path tracing."
+            },
+            {
+               "type": "exec",
                "name": "More",
                "contents": "https://github.com/SebastianDang/",
                "description": "More to come on my Github."
