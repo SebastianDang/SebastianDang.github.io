@@ -1,5 +1,6 @@
 # Bat
 .bat
+*.bat
 
 # Mac
 .DS_Store
