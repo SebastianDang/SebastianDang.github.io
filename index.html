@@ -82,11 +82,13 @@
                 <div class="col-lg-8 col-lg-offset-2">
                     <!-- Terminal Window -->
                     <div class="terminal-window">
-                        <header>
-                            <div class="button green"></div>
-                            <div class="button yellow"></div>
-                            <div class="button red"></div>
-                        </header>
+                        <span title="Drag me !">
+                            <header>
+                                <div class="button green"></div>
+                                <div class="button yellow"></div>
+                                <div class="button red"></div>
+                            </header>
+                        </span>
                         <section class="terminal">
 
                             <div id="jsterm_container">
@@ -273,6 +275,10 @@
         }
         //Add draggable items here.
         $('.terminal-window').mousedown(handle_mousedown);
+        //This allows clicking on everything but the terminal. Allows drag by the titlebar.
+        $('.terminal').mousedown(function(event){
+            event.stopPropagation();
+        });
     </script>
     <script>
         var called = false;
