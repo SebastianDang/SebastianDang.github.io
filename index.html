@@ -83,7 +83,7 @@
                     <!-- Terminal Window -->
                     <div class="terminal-window">
                         <span title="Drag me !">
-                            <header>
+                            <header id="terminal-header" >
                                 <div class="button green"></div>
                                 <div class="button yellow"></div>
                                 <div class="button red"></div>
@@ -246,6 +246,10 @@
     <script>
         //#draggable
         function handle_mousedown(e) {
+            //When minimized, we still need to check that the target is only the header.
+            if(!$(event.target).is("#terminal-header")) return;
+
+            //Calculate
             window.draggable = {};
             draggable.pageX0 = e.pageX;
             draggable.pageY0 = e.pageY;
@@ -281,6 +285,7 @@
         });
     </script>
     <script>
+        //Jsterm
         var called = false;
         var hT = $('#jsterm_container').offset().top;
         //Trigger.
@@ -302,6 +307,12 @@
             if (wS > (hT + hH - wH) && (hT > wS) && (wS + wH > hT + hH)) {
                 trigger();
             }
+        });
+    </script>
+    <script>
+        // Toggle hide/show terminal.
+        $('.button.green').mousedown(function(event){
+            $(".terminal").slideToggle();
         });
     </script>
 
