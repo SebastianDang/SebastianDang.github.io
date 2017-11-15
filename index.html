@@ -244,10 +244,37 @@
         });
     </script>
     <script>
+        // Fix resizing problems with #draggable
+        $(document).ready(reposition_terminal);
+        window.addEventListener("resize", reposition_terminal);
+
+        function reposition_terminal() {
+
+            //Set boundaries so the terminal is always inside the bounds.
+            var left = $('.terminal-window').offset().left;
+            var top = $('.terminal-window').offset().top;
+
+            if (left < 0)
+                left = 0;
+            if (left > ($(window).width() - $('.terminal-window').width()))
+                left = $(window).width() - $('.terminal-window').width();
+
+            if (top < 0)
+                top = 0;
+            if (top > $('footer').offset().top)
+                top = $('footer').offset().top;
+
+            $('.terminal-window').offset({
+                top: top,
+                left: left
+            })
+        }
+        
         //#draggable
         function handle_mousedown(e) {
+
             //When minimized, we still need to check that the target is only the header.
-            if(!$(event.target).is("#terminal-header")) return;
+            if (!$(event.target).is("#terminal-header")) return;
 
             //Calculate
             window.draggable = {};
@@ -259,11 +286,22 @@
             function handle_dragging(e) {
                 var left = draggable.offset0.left + (e.pageX - draggable.pageX0);
                 var top = draggable.offset0.top + (e.pageY - draggable.pageY0);
-                $(draggable.elem)
-                    .offset({
-                        top: top,
-                        left: left
-                    });
+
+                //Set boundaries so the terminal is always inside the bounds.
+                if (left < 0)
+                    left = 0;
+                if (left > ($(window).width() - $('.terminal-window').width()))
+                    left = $(window).width() - $('.terminal-window').width();
+
+                if (top < 0)
+                    top = 0;
+                if (top > $('footer').offset().top)
+                    top = $('footer').offset().top;
+
+                $(draggable.elem).offset({
+                    top: top,
+                    left: left
+                });
             }
 
             function handle_mouseup(e) {
@@ -280,7 +318,7 @@
         //Add draggable items here.
         $('.terminal-window').mousedown(handle_mousedown);
         //This allows clicking on everything but the terminal. Allows drag by the titlebar.
-        $('.terminal').mousedown(function(event){
+        $('.terminal').mousedown(function(event) {
             event.stopPropagation();
         });
     </script>
@@ -311,11 +349,10 @@
     </script>
     <script>
         // Toggle hide/show terminal.
-        $('.button.green').mousedown(function(event){
+        $('.button.green').mousedown(function(event) {
             $(".terminal").slideToggle();
         });
     </script>
-
     <script>
         (function(i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
