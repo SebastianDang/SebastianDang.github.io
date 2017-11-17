@@ -84,9 +84,9 @@
                     <div class="terminal-window">
                         <span title="Drag me !">
                             <header id="terminal-header" >
-                                <div class="button green"></div>
-                                <div class="button yellow"></div>
                                 <div class="button red"></div>
+                                <div class="button yellow"></div>
+                                <div title="Minimize me !" class="button green"></div>
                             </header>
                         </span>
                         <section class="terminal">
@@ -269,12 +269,13 @@
                 left: left
             })
         }
-        
+
         //#draggable
         function handle_mousedown(e) {
 
             //When minimized, we still need to check that the target is only the header.
-            if (!$(event.target).is("#terminal-header")) return;
+            if(!e) e = window.event;
+            if (!$(e.target).is("#terminal-header")) return;
 
             //Calculate
             window.draggable = {};
@@ -351,6 +352,11 @@
         // Toggle hide/show terminal.
         $('.button.green').mousedown(function(event) {
             $(".terminal").slideToggle();
+        });
+    </script>
+    <script>
+        $('.button.yellow').mousedown(function(event) {
+            $(".terminal-window").toggleClass('fullscreen');
         });
     </script>
     <script>

@@ -97,6 +97,15 @@ body {
     position: relative;
 }
 
+.terminal-window.fullscreen{
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
 .terminal-window header {
     background: #E0E8F0;
     height: 30px;
@@ -122,6 +131,18 @@ body {
 
 .terminal-window header .button.red {
     background: #E75448;
+}
+
+.terminal-window header .button.green:hover {
+    background: #9EDBB1;
+}
+
+.terminal-window header .button.yellow:hover {
+    background: #F2E188;
+}
+
+.terminal-window header .button.red:hover {
+    background: #F3AAA4;
 }
 
 .terminal-window section.terminal {
