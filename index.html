@@ -349,19 +349,18 @@
         });
     </script>
     <script>
-        // Toggle hide/show terminal.
+        // Some helper functions and variables
         var hidden = false;
-        $('.button.green').mousedown(function(event) {
+        function toggle_minimize(e){
             $(".terminal").slideToggle();
             hidden = !hidden;
-        });
+        }
+        // Toggle hide/show terminal.
+        $('.button.green').mousedown(toggle_minimize);
         // Toggle maximize.
         $('.button.yellow').mousedown(function(event) {
             $(".terminal-window").toggleClass('fullscreen');
-            if (hidden) {
-                $(".terminal").slideToggle();
-                hidden = !hidden;
-            }
+            if (hidden) toggle_minimize(event);
         });
     </script>
     <script>
