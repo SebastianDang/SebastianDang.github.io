@@ -2,5 +2,9 @@
 .bat
 *.bat
 
+# Script
+.sh
+*.sh
+
 # Mac
 .DS_Store
