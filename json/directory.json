@@ -72,6 +72,12 @@
             },
             {
                "type": "exec",
+               "name": "DiscordBot",
+               "contents": "https://github.com/SebastianDang/Discord-Bot",
+               "description": "A simple Discord Bot written in C# using the Discord.Net API. Features include a minimal UI, chat management, audio playback, automatic playlist management, multitasking and multithreading."
+            },
+            {
+               "type": "exec",
                "name": "More",
                "contents": "https://github.com/SebastianDang/",
                "description": "More to come on my Github."
