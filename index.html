@@ -37,21 +37,27 @@
     <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
+            <!-- X button -->
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <!-- Title -->
             <li class="sidebar-brand">
-                <a href="#top" onclick=$( "#menu-close").click();>Sebastian Dang</a>
+                <a href="#top" onclick=$("#menu-close").click();>Sebastian Dang</a>
             </li>
+            <!-- About -->
             <li>
-                <a href="#about" onclick=$( "#menu-close").click();>About</a>
+                <a href="#about" onclick=$("#menu-close").click();>About</a>
             </li>
+            <!-- LinkedIn -->
             <li>
-                <a target="_blank" href="https://www.linkedin.com/in/sebastiandang" onclick=$( "#menu-close").click();>LinkedIn</a>
+                <a target="_blank" href="https://www.linkedin.com/in/sebastiandang" onclick=$("#menu-close").click();>LinkedIn</a>
             </li>
+            <!-- Github -->
             <li>
-                <a target="_blank" href="https://github.com/sebastiandang" onclick=$( "#menu-close").click();>Github</a>
+                <a target="_blank" href="https://github.com/sebastiandang" onclick=$("#menu-close").click();>Github</a>
             </li>
+            <!-- Resume -->
             <li>
-                <a target="_blank" href="docs/Sebastian_Dang_Resume.pdf" onclick=$( "#menu-close").click();>Resume</a>
+                <a target="_blank" href="docs/Sebastian_Dang_Resume.pdf" onclick=$("#menu-close").click();>Resume</a>
             </li>
         </ul>
     </nav>
@@ -78,33 +84,28 @@
                 </div>
             </div>
             <div class="row">
-
                 <div class="col-lg-8 col-lg-offset-2">
                     <!-- Terminal Window -->
                     <div class="terminal-window">
+                        <!-- Title Bar -->
                         <span title="Drag me !">
                             <header id="terminal-header" >
                                 <div class="button red"></div>
-                                <div title="Maximize me !" class="button yellow"></div>
-                                <div title="Minimize me !" class="button green"></div>
+                                <div class="button yellow" title="Maximize me !"></div>
+                                <div class="button green" title="Minimize me !"></div>
                             </header>
                         </span>
+                        <!-- Terminal -->
                         <section class="terminal">
-
                             <div id="jsterm_container">
                                 <script type="text/javascript" src="./commands/default.js"></script>
                                 <script type="text/javascript" src="./config/config.js"></script>
                                 <!--  Will be added in ONCE through script below. -->
                                 <!-- <script type="text/javascript" src="./js/jsterm.js"></script> -->
                             </div>
-
                         </section>
                     </div>
                 </div>
-
-                <div class="col-md-2">
-                </div>
-
             </div>
             <!-- /.row -->
         </div>
@@ -181,7 +182,7 @@
                 }
             });
         });
-        //#to-top button appears after scrolling
+        // #to-top button appears after scrolling
         var fixed = false;
         $(document).scroll(function() {
             if ($(this).scrollTop() > 250) {
@@ -206,14 +207,14 @@
                 }
             }
         });
-        //End Script
-        //Always scroll to top on load.
+        // End Script
+        // Always scroll to top on load.
         window.onbeforeunload = function() {
             window.scrollTo(0, 0);
         }
     </script>
     <script>
-        //#typewriter
+        // #typewriter
         $(function() {
             $("#typed").typed({
                 strings: ["Soft^50ware ^120 Engineer", "Web ^50 Developer", "3D ^150 Graphics ^100 Wizard", "Explore^40r"],
@@ -270,14 +271,14 @@
             })
         }
 
-        //#draggable
+        // #draggable
         function handle_mousedown(e) {
 
-            //When minimized, we still need to check that the target is only the header.
+            // When minimized, we still need to check that the target is only the header.
             if(!e) e = window.event;
             if (!$(e.target).is("#terminal-header")) return;
 
-            //Calculate
+            // Calculate
             window.draggable = {};
             draggable.pageX0 = e.pageX;
             draggable.pageY0 = e.pageY;
@@ -288,7 +289,7 @@
                 var left = draggable.offset0.left + (e.pageX - draggable.pageX0);
                 var top = draggable.offset0.top + (e.pageY - draggable.pageY0);
 
-                //Set boundaries so the terminal is always inside the bounds.
+                // Set boundaries so the terminal is always inside the bounds.
                 if (left < 0)
                     left = 0;
                 if (left > ($(window).width() - $('.terminal-window').width()))
@@ -316,33 +317,33 @@
                 .on('mousemove', handle_dragging);
 
         }
-        //Add draggable items here.
+        // Add draggable items here.
         $('.terminal-window').mousedown(handle_mousedown);
-        //This allows clicking on everything but the terminal. Allows drag by the titlebar.
+        // This allows clicking on everything but the terminal. Allows drag by the titlebar.
         $('.terminal').mousedown(function(event) {
             event.stopPropagation();
         });
     </script>
     <script>
-        //Jsterm
+        // Jsterm
         var called = false;
         var hT = $('#jsterm_container').offset().top;
-        //Trigger.
+        // Trigger
         var trigger = function() {
             called = true;
             $.getScript('./js/jsterm.js', function() {});
         };
-        //Scroll function.
+        // Scroll function
         $(window).scroll(function() {
             //Check if already enabled.
             if (called) {
                 return;
             }
-            //Calculate the scroll offset.
+            // Calculate the scroll offset
             var hH = $('#jsterm_container').outerHeight(),
                 wH = $(window).height(),
                 wS = $(this).scrollTop();
-            //Check the scroll.
+            // Check the scroll
             if (wS > (hT + hH - wH) && (hT > wS) && (wS + wH > hT + hH)) {
                 trigger();
             }
@@ -355,9 +356,9 @@
             $(".terminal").slideToggle();
             hidden = !hidden;
         }
-        // Toggle hide/show terminal.
+        // Toggle hide/show terminal
         $('.button.green').mousedown(toggle_minimize);
-        // Toggle maximize.
+        // Toggle maximize
         $('.button.yellow').mousedown(function(event) {
             $(".terminal-window").toggleClass('fullscreen');
             if (hidden) toggle_minimize(event);
