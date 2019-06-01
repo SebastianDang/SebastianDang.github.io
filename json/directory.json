@@ -42,9 +42,15 @@
          "contents": [
             {
                "type": "exec",
-               "name": "DontStarve",
-               "contents": "https://github.com/SebastianDang/DontStarve",
-               "description": "Don't Starve is a simple Android Application built for a software engineering class (CSE110). Although the application is far from complete, it taught me a lot about agile development and working with customers whose demands can range from superficial to realistic."
+               "name": "DiscordBot",
+               "contents": "https://github.com/SebastianDang/Discord-Bot",
+               "description": "A simple Discord Bot written in C# using the Discord.Net API. Features include a minimal UI, chat management, audio playback, automatic playlist management, multitasking and multithreading."
+            },
+            {
+               "type": "exec",
+               "name": "Rendering",
+               "contents": "/cse168.html",
+               "description": "This rendered picture is the result of a final project for an advanced computer graphics course. It utilizes different graphical techniques, particularly in ray and path tracing."
             },
             {
                "type": "exec",
@@ -57,24 +63,6 @@
                "name": "ComputerGraphics",
                "contents": "https://github.com/SebastianDang/CSE167_Final",
                "description": "The Island is a final project for CSE167: Computer Graphics, using openGL and C++. This project attempts to summarize concepts learned in the course throughout the quarter and implement advanced computer graphics concepts. Some concepts were cut to meet deadlines, so some parts of the final project were not fully implemented as planned."
-            },
-            {
-               "type": "exec",
-               "name": "Charm",
-               "contents": "https://github.com/SebastianDang/Charm",
-               "description": "Charm is a simple framework for an android application. Initially created for a future android application that would be a social network app. However, the project was temporarily shelved, but has simple server sided authentication for user registration and login."
-            },
-            {
-               "type": "exec",
-               "name": "Rendering",
-               "contents": "/cse168.html",
-               "description": "This rendered picture is the result of a final project for an advanced computer graphics course. It utilizes different graphical techniques, particularly in ray and path tracing."
-            },
-            {
-               "type": "exec",
-               "name": "DiscordBot",
-               "contents": "https://github.com/SebastianDang/Discord-Bot",
-               "description": "A simple Discord Bot written in C# using the Discord.Net API. Features include a minimal UI, chat management, audio playback, automatic playlist management, multitasking and multithreading."
             },
             {
                "type": "exec",
