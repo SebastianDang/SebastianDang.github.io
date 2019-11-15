@@ -18,6 +18,12 @@
          "contents": [
             {
                 "type": "exec",
+                "name": "qcom",
+                "contents": "https://www.qualcomm.com/",
+                "description": "Qualcomm"
+            },
+            {
+                "type": "exec",
                 "name": "smt",
                 "contents": "http://www.sportvision.com/",
                 "description": "Sports Media Technology"
