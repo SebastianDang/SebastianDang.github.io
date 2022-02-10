@@ -10,23 +10,29 @@
       {
          "type": "text",
          "name": "about",
-         "contents": "My name is Sebastian.<br><br>I'm currently a Software Engineer at <br>Qualcomm, San Diego<br><br>I graduated with a B.S. in Computer Science at the<br>University of California, San Diego.<br>"
+         "contents": "My name is Sebastian.<br><br>I'm currently a Software Engineer at Zillow.<br><br>I graduated with a B.S. in Computer Science at the<br>University of California, San Diego.<br>"
       },
       {
          "type": "dir",
          "name": "experience",
          "contents": [
             {
-                "type": "exec",
-                "name": "qcom",
-                "contents": "https://www.qualcomm.com/",
-                "description": "Qualcomm"
+               "type": "exec",
+               "name": "z",
+               "contents": "https://www.zillow.com/",
+               "description": "Zillow"
             },
             {
-                "type": "exec",
-                "name": "smt",
-                "contents": "http://www.sportvision.com/",
-                "description": "Sports Media Technology"
+               "type": "exec",
+               "name": "qcom",
+               "contents": "https://www.qualcomm.com/",
+               "description": "Qualcomm"
+            },
+            {
+               "type": "exec",
+               "name": "smt",
+               "contents": "http://www.sportvision.com/",
+               "description": "Sports Media Technology"
             },
             {
                "type": "exec",
@@ -48,6 +54,12 @@
          "contents": [
             {
                "type": "exec",
+               "name": "MaplePy",
+               "contents": "https://github.com/SebastianDang/maplepy",
+               "description": "A game client emulator for a popular MMORPG in python."
+            },
+            {
+               "type": "exec",
                "name": "DiscordBot",
                "contents": "https://github.com/SebastianDang/Discord-Bot",
                "description": "A simple Discord Bot written in C# using the Discord.Net API. Features include a minimal UI, chat management, audio playback, automatic playlist management, multitasking and multithreading."
@@ -57,18 +69,6 @@
                "name": "Rendering",
                "contents": "/cse168.html",
                "description": "This rendered picture is the result of a final project for an advanced computer graphics course. It utilizes different graphical techniques, particularly in ray and path tracing."
-            },
-            {
-               "type": "exec",
-               "name": "OpenGL",
-               "contents": "https://github.com/SebastianDang/OpenGL",
-               "description": "After taking a Computer Graphics course, I wanted to dive more into the OpenGL concepts I learned towards the end of the class. This application replicates water using Frame Buffer Objects for both reflection and refraction, clipping planes, and DU/DV maps to create a wavy effect. Currently, I'm working on making this more realistic to mimic the basic properties of water."
-            },
-            {
-               "type": "exec",
-               "name": "ComputerGraphics",
-               "contents": "https://github.com/SebastianDang/CSE167_Final",
-               "description": "The Island is a final project for CSE167: Computer Graphics, using openGL and C++. This project attempts to summarize concepts learned in the course throughout the quarter and implement advanced computer graphics concepts. Some concepts were cut to meet deadlines, so some parts of the final project were not fully implemented as planned."
             },
             {
                "type": "exec",
